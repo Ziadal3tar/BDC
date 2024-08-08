@@ -6,11 +6,12 @@ import { HomeComponent } from "./component/home/home.component";
 import { NavComponent } from "./component/nav/nav.component";
 import { AboutComponent } from "./component/about/about.component";
 import { FooterComponent } from "./component/footer/footer.component";
+import { ServicesComponent } from "./component/services/services.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, HomeComponent, NavComponent, AboutComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, HomeComponent, NavComponent, AboutComponent, FooterComponent, ServicesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
