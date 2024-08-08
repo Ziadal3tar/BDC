@@ -10,7 +10,7 @@ export class ScrollTransformDirective {
   onWindowScroll() {
 
     const offset = window.scrollY;
-    const translateValue = offset * 1.5; // Adjust the division factor to control the speed of transformation
+    const translateValue = offset * 1.1; // Adjust the division factor to control the speed of transformation
     const prefSec = document.getElementById('prefSec');
     if (prefSec) {
       prefSec.style.transform = `translateX(-${translateValue}px)`;
