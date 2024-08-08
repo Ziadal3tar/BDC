@@ -7,11 +7,14 @@ import { NavComponent } from "./component/nav/nav.component";
 import { AboutComponent } from "./component/about/about.component";
 import { FooterComponent } from "./component/footer/footer.component";
 import { ServicesComponent } from "./component/services/services.component";
+import { ARIS7Component } from "./component/aris7/aris7.component";
+import { CanWeHelpComponent } from "./component/can-we-help/can-we-help.component";
+import { ContactComponent } from "./component/contact/contact.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, HomeComponent, NavComponent, AboutComponent, FooterComponent, ServicesComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, HomeComponent, NavComponent, AboutComponent, FooterComponent, ServicesComponent, ARIS7Component, CanWeHelpComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,4 +1,4 @@
-<nav class="row w-100 position-fixed d-flex justify-content-between px-3 m-0 mt-3 ">
+<nav class="row w-100 position-fixed d-flex justify-content-between p-3 m-0 transition" id="nav">
   <div class="logo col-md-2 col-4  h-75 d-flex align-items-center justify-content-start">
 
       <img src="./assets/logo.png" alt="" srcset="">
@@ -6,8 +6,8 @@
   </div>
   <ul class="col-md-8 col-lg-7 col-xl-6 align-items-center justify-content-between list-unstyled m-0 d-none d-md-flex ">
     <li>About Us</li>
-    <li>Blog</li>
     <li>Who Can We Help</li>
+    <li>Blog</li>
     <li>Services</li>
     <li>Contact Us</li>
   </ul>
@@ -31,8 +31,8 @@
   <div class="h-100 w-100 d-flex align-items-center justify-content-center ">
     <ul class="transition d-flex flex-column align-items-start justify-content-between w-100 h-50 px-5 p-0 m-0 pb-1 list-unstyled">
       <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}">About Us</a></li>
-      <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}">Blog</a></li>
       <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}">Who Can We Help</a></li>
+      <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}">Blog</a></li>
       <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}">Services</a></li>
       <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}">Contact Us</a></li>
     </ul>

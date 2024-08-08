@@ -18,8 +18,5 @@ export class ServicesComponent {
     { title: 'Service 4', description: 'Description 4' },
     { title: 'Service 5', description: 'Description 5' }
   ];
-  ddd(){
-    console.log('gf');
 
-  }
 }

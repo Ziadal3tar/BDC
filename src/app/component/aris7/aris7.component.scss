@@ -1,0 +1,107 @@
+#aris {
+  p {
+    font-weight: 500;
+  }
+
+  .aris-container {
+    height: 100vh;
+
+    .circle {
+      width: 80vh;
+      height: 80vh;
+      border-radius: 50%;
+      background-color: #3f3d77;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+
+      .content {
+        p {
+          padding: 0 50px;
+        }
+      }
+
+      .puzzle-piece {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+      }
+
+      .piece1 {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .piece2 {
+        top: 50%;
+        right: 0;
+        transform: translate(0%, -190%);
+      }
+
+      .piece3 {
+        top: 50%;
+        right: 0;
+        transform: translate(30%, 25%);
+      }
+
+      .piece4 {
+        bottom: 0;
+        left: 50%;
+        transform: translate(50%, 20%);
+      }
+
+      .piece5 {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-150%, 20%);
+      }
+
+      .piece6 {
+        top: 50%;
+        left: 0;
+        transform: translate(-30%, 25%);
+      }
+
+      .piece7 {
+        top: 50%;
+        left: 0;
+        transform: translate(0%, -190%);
+      }
+
+      @media (max-width :1900px) {
+        .puzzle-piece {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+        }
+      }
+
+    }
+
+    .box {
+      background-color: #3f3d77;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .puzzle-piece {
+        width: 120px;
+        height: 120px;
+      }
+
+      .icon {}
+
+      h2,
+      p {
+        text-align: center;
+      }
+
+    }
+  }
+}
