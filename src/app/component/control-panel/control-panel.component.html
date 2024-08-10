@@ -1,20 +1,93 @@
-<section id="control">
+<div class="main h-auto py-2">
+  <h1 class=" text-center mainTitleColor fw-semibold m-5">Control Panel</h1>
+<section id="control" class="row d-flex justify-content-center col-10 offset-1 vh-100 " *ngIf="!addBlog">
+
+  <div class="categoryControle col-12 col-md-6 col-lg-4 mb-4 mb-xl-4 d-flex flex-column align-items-center">
+    <div class="box">
+      <div class="title p-3">Categories</div>
+      <div class="categories scrollStyle">
+        <div class=" w-100 d-flex align-items-center justify-content-between p-3 border-bottom " *ngFor="let category of allCategories">
+          <div class="name">{{category.category}}</div>
+          <i class="bi bi-trash-fill text-danger pointer" (click)="removeCategory(category._id)"></i>
+        </div>
+      </div>
+      <div class="addInput position-relative">
+        <input type="text" class="p-2 bg-white bg-opacity-50 col-12 border-0 h-100 rounded-0"
+          placeholder="Category Name" [(ngModel)]="categoryName">
+        <div class="icon position-absolute " (click)="addCategory()"><i class="bi bi-send-fill fw-bold"></i></div>
+
+      </div>
+    </div>
+    <div style="width: 300px;">
+
+      <p class=" text-danger">{{categoryErr}}</p>
+    </div>
+  </div>
+  <div class="adminsControle flex-column col-12 col-md-6 col-lg-4 mb-4 mb-xl-4 d-flex align-items-center">
+    <div class="box">
+      <div class="title p-3">Admins</div>
+      <div class="admins scrollStyle">
+        <div class=" w-100 d-flex align-items-center justify-content-between p-3 border-bottom " *ngFor="let admin of allAdmin">
+          <div>
+            <div class="name">{{admin.adminName}}</div>
+            <div class="password">{{admin.adminPassword}}</div>
+
+
+          </div>
+          <i class="bi bi-trash-fill text-danger pointer" (click)="removeAdmin(admin._id)"></i>
+        </div>
+      </div>
+      <div class="addInput position-relative">
+        <input [(ngModel)]="adminName" type="text" class="p-2 bg-white bg-opacity-50 col-12 border-0 h-50 rounded-0" placeholder="User Name">
+        <input [(ngModel)]="adminPassword" type="text" class="p-2 bg-white bg-opacity-50 col-12 border-0 h-50 rounded-0" placeholder="Password">
+        <div class="icon position-absolute " (click)="addAdmin()"><i class="bi bi-send-fill fw-bold"></i></div>
+
+      </div>
+    </div>
+    <div style="width: 300px;">
+
+      <p class=" text-danger">{{adminErr}}</p>
+    </div>
+  </div>
+  <div class="BlogsControle col-12 col-md-6 col-lg-4 mb-4 mb-xl-4 d-flex justify-content-center">
+    <div class="box">
+      <div class="title p-3">Blogs</div>
+      <div class="Blogs scrollStyle">
+        <div class="Blog w-100 d-flex align-items-center justify-content-between pe-3 border-bottom ">
+          <div class="h-100 w-100 d-flex align-items-center ">
+            <img class="h-100 object-fit-cover w-25" src="../../../assets/abouusimg.jpg" alt="">
+            <p class=" ms-3">blogName</p>
+
+
+          </div>
+          <i class="bi bi-trash-fill text-danger pointer"></i>
+        </div>
+      </div>
+      <div class="addInput position-relative">
+        <button class="btn rounded-0 w-100 h-100" (click)="addBlog = !addBlog">ADD Blog</button>
+
+      </div>
+    </div>
+  </div>
+</section>
+<section id="controlAdd" class="d-flex justify-content-center mb-5 " *ngIf="addBlog">
   <div class="blogControl col-12 row d-flex justify-content-center">
-    <div class="box col-4 position-relative">
+    <div class="box col-12 col-md-10 col-lg-8 col-xl-4 position-relative">
+      <i class="bi bi-x-lg position-absolute top-0 end-0 m-3 pointer" (click)="addBlog = !addBlog"></i>
       <p class="title m-4 fw-bold fs-4">{{title}}</p>
       <div class="d-flex flex-column align-items-center">
-        <input type="text" class="p-2 bg-white bg-opacity-50 rounded-3 col-6 border-0 h-100 my-2"
+        <input type="text" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-7 border-0 h-100 my-2"
           placeholder="{{inputTitle}}" [(ngModel)]="inputTitleData">
 
         <input type="file" class="d-none" id="blogImg" (change)="onImageSelected($event)">
-        <label for="blogImg" class="p-2 bg-white bg-opacity-50 rounded-3 col-6 border-0 h-100 my-2 text-center pointer fw-bolder">
+        <label for="blogImg" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-7 border-0 h-100 my-2 text-center pointer fw-bolder">
           Upload Photo <span class="fs-6 fw-normal">(optional)</span>
         </label>
 
         <textarea placeholder="{{inputDesc}}" [(ngModel)]="inputDescData"
-          class="p-2 bg-white bg-opacity-50 rounded-3 col-6 border-0 h-100 my-2" rows="10"></textarea>
+          class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-7 border-0 h-100 my-2" rows="10"></textarea>
 
-        <div class="col-6 pt-3" *ngIf="isBlogDetails()">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 pt-3" *ngIf="isBlogDetails()">
           <p>How Many Paragraphs?</p>
           <input type="number" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 border-0 h-100 my-2"
             [(ngModel)]="numOfPar">
@@ -22,11 +95,7 @@
       </div>
 
       <div class="d-flex w-100 justify-content-end" >
-        <!-- [ngClass]="isBlogDetails() ? 'justify-content-end' : 'justify-content-between'" -->
-        <!-- <button *ngIf="!isBlogDetails()" class="btn btn-dark fw-bold rounded-5 px-4 m-4" (click)="prev()">
-          <i class="bi bi-arrow-left"></i>
-        </button> -->
-        <button class="btn btn-dark fw-bold rounded-5 px-4 m-4" (click)="next()" [disabled]="num > numOfPar">
+        <button class="btn btn-dark fw-bold rounded-5 px-4 m-4 w-25" (click)="next()" [disabled]="num > numOfPar">
           <i *ngIf="numOfPar == null" class="bi bi-arrow-right"></i>
           <i *ngIf="num < numOfPar" class="bi bi-arrow-right"></i>
           <p *ngIf="num >= numOfPar">Add Blog</p>
@@ -35,3 +104,4 @@
     </div>
   </div>
 </section>
+</div>

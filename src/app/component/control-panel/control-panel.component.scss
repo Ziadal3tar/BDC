@@ -1,9 +1,177 @@
+.main{
+  background-color: #e4e4e457;
+}
 #control {
+ color: #265f55 !important;
+ font-weight: 500;
   .blogControl {
     .box {
-      background: linear-gradient(135deg, #68ddb3, #3ac0cf 25%, #a2dfc8 70%, #00c7dc);
+      background: linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1);
       // linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1)
+      border-radius: 20px;
+      // padding-bottom: 40px !important;
+    }
+  }
+
+  .categoryControle {
+    .box {
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1);
+      overflow: hidden;
+
+      .title {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 15%;
+      }
+    }
+
+    .categories {
+      height: 70%;
+
+    }
+
+    .addInput {
+      height: 15%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      .icon {
+        top: 7.5px;
+        right: 7.5px;
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        i {
+          color: #68ddb3;
+          font-weight: 900;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .adminsControle {
+    .box {
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1);
+      overflow: hidden;
+
+      .title {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 15%;
+      }
+    }
+
+    .admins {
+      height: 65%;
+
+      .password {
+        font-size: 12px;
+      }
+    }
+
+    .addInput {
+      height: 20%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      .icon {
+        top: calc(50% - 20px);
+        right: 7.5px;
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        i {
+          color: #68ddb3;
+          font-weight: 900;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .BlogsControle {
+    button{
+      background-color: #4dc5d2;
+      color: white;
+    }
+    .box {
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1);
+      overflow: hidden;
+
+      .title {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        height: 15%;
+      }
+    }
+
+    .Blogs {
+      height: 75%;
+
+      .Blog {
+        height: 80px;
+      }
+
+      .password {
+        font-size: 12px;
+      }
+    }
+
+    .addInput {
+      height: 10%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      .icon {
+        top: calc(50% - 20px);
+        right: 7.5px;
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        i {
+          color: #68ddb3;
+          font-weight: 900;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+#controlAdd {
+
+  .blogControl {
+
+    .box {
+      background: linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1);
       border-radius: 20px;
     }
   }
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
