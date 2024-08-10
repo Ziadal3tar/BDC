@@ -1,0 +1,188 @@
+#blogs {
+  width: 100%;
+  height: auto !important;
+  background: #ffffff;
+  padding: 0 150px !important;
+
+  @media (min-width : 250px) and (max-width : 500px) {
+    padding: 0 20px !important;
+  }
+
+  @media (min-width : 500px) and (max-width : 767px) {
+    padding: 0 50px !important;
+
+  }
+
+  @media (min-width : 767px) and (max-width : 991px) {
+    padding: 0 70px !important;
+
+  }
+  @media (min-width : 991px) and (max-width : 1199px) {
+    padding: 0 30px !important;
+
+  }
+  @media (min-width : 1200px) and (max-width : 1500px) {
+    padding: 0 50px !important;
+
+  }
+ margin: 0;
+  .BlogTitle {
+    color: #418d71;
+    letter-spacing: 5px;
+
+  }
+
+  .filter {
+    padding: 20px 0;
+
+    .box {
+      height: 727px;
+      width: 100%;
+      background-color: #68ddb3;
+      background-image: linear-gradient(135deg, #68ddb3, #3ac0cf 25%, #a2dfc8 70%, #00c7dc);
+      border-radius: 10px;
+
+      .search {
+        height: 55px;
+
+        .icon {
+          top: 7.5px;
+          right: 7.5px;
+          background-color: white;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+          cursor: pointer;
+
+          i {
+            color: #68ddb3;
+            font-weight: 900;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .categories {
+        height: 468px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        .category {
+          label {
+            cursor: pointer;
+            user-select: none;
+          }
+
+          .custom-checkbox input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+
+          .custom-checkbox {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            font-size: 18px;
+            user-select: none;
+          }
+
+          .custom-checkbox .checkmark {
+            position: absolute;
+            top: -10px;
+            right: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #68ddb246 !important;
+            border-radius: 4px;
+          }
+
+          .custom-checkbox input:checked~.checkmark {
+            background-color: #00c7dc !important;
+          }
+
+          .custom-checkbox .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+
+          .custom-checkbox input:checked~.checkmark:after {
+            display: block;
+          }
+
+          .custom-checkbox .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+
+        }
+      }
+    }
+  }
+
+  .blogs {
+    height: 80vh;
+    margin: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    .box {
+      padding:  20px;
+
+      .inside {
+
+        .img {
+          width: 100%;
+          height: 200px;
+          border-radius: 10px 10px 0 0;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .title {
+          color: black;
+          margin-bottom: 10px;
+          font-size: 18px;
+          font-weight: 700;
+          text-decoration: none;
+          padding: 20px 0;
+        }
+
+        .desc {
+          margin-bottom: 20px;
+          font-size: 14px;
+          padding-bottom: 20px;
+        }
+
+        .more {
+          button {
+            font-size: 12px;
+            border-radius: 0 0 0 10px;
+            border: 0;
+            background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc);
+            &:hover {
+              background: linear-gradient(135deg, #68ddb3, #3ac0cf 25%, #a2dfc8 70%, #00c7dc);
+            }
+          }
+        }
+      }
+    }
+  }
+}

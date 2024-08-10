@@ -11,11 +11,11 @@ export class ScrollTransformDirective {
     const nav = document.getElementById('nav');
     if (window.scrollY >= 650) {
       if (nav) {
-        nav.style.backgroundColor = `#164e39`;
+        nav.style.background = `linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc)`;
       }
     } else {
       if (nav) {
-        nav.style.backgroundColor = `transparent`;
+        nav.style.background = `transparent`;
       }
     }
     const offset = window.scrollY;

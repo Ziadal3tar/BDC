@@ -1,1 +1,42 @@
-<p>service-details works!</p>
+<div id="details">
+  <div class="box row">
+    <p class="title">Lorem ipsum dolor sit amet.</p>
+    <div class="img col-12">
+      <img src="../../../assets/help.jpg" alt="">
+    </div>
+    <div class="blogDetails col-12 col-md-8">
+      <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iure, voluptatem enim dolore
+        voluptates voluptate quaerat nesciunt impedit est. Nam reiciendis quisquam ratione nostrum voluptatum facilis
+        sit reprehenderit, corrupti quaerat enim fuga tempora quo excepturi architecto tempore ut officiis. Neque sequi
+        necessitatibus repellendus ab! Culpa neque atque praesentium dolorem voluptate sit nobis reiciendis nihil
+        assumenda inventore nostrum ab temporibus, rem numquam similique perferendis in et. Sapiente nihil explicabo
+        veniam soluta magnam magni reiciendis nulla, nostrum, quae quas quidem eos eligendi deleniti aliquam numquam id
+        odio accusamus? Facere iusto, corrupti id ab vitae, voluptas fugit tempore aperiam quam, repellat similique
+        totam officia magni dolore enim nemo? Excepturi nesciunt sunt eaque maxime, dolore praesentium doloribus libero
+        quasi perferendis, facere voluptate commodi sint optio laudantium accusamus quisquam dolorem deleniti omnis
+        repellendus. Optio ullam natus voluptatum fugit nobis dolor maxime sunt repellat corporis, corrupti molestiae
+        eum nulla quae veniam a maiores alias. Tempora, vitae?</div>
+
+
+
+        <div class="paragraphs">
+          <div class="paragraph" *ngFor="let paragraph of paragraphs">
+            <div class="paragraphTitle">{{paragraph.title}}</div>
+            <div class="paragraphImg" *ngIf="paragraph.img" ><img src="{{paragraph.img}}" alt=""></div>
+            <div class="paragraphTitleDesc">{{paragraph.desc}}</div>
+          </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="sameTypes col-12 col-md-4 p-lg-5 py-5  pt-0">
+      <p class="fs-3 fw-bold py-3">Similar articles</p>
+      <div class="col-12 box" *ngFor="let item of paragraphs">
+        <div class="sameTypesImg"><img src="../../../assets/girl-5460168.jpg" alt=""></div>
+        <div class="sameTypesTitle">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   ngOnInit(): void {
     setTimeout(() => {
-      this.open();
+      // this.open();
     }, 3000);
   }
   open() {

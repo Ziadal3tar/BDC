@@ -12,11 +12,11 @@ imports: [CommonModule,ServicesDragScrollDirective],
 })
 export class ServicesComponent {
   services = [
-    { title: 'Service 1', description: 'Description 1' },
-    { title: 'Service 2', description: 'Description 2' },
-    { title: 'Service 3', description: 'Description 3' },
-    { title: 'Service 4', description: 'Description 4' },
-    { title: 'Service 5', description: 'Description 5' }
+    { title: ' Brain Training', description: 'Description 1' },
+    { title: 'Autism Program', description: 'Description 2' },
+    { title: 'Family Program', description: 'Description 3' },
+    { title: 'PASS Programs', description: 'Description 4' },
+    { title: 'Assessments', description: 'Description 5' }
   ];
 
 }
