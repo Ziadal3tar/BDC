@@ -1,8 +1,9 @@
-#control{
-  .blogControl{
-    .box{
+#control {
+  .blogControl {
+    .box {
       background: linear-gradient(135deg, #68ddb3, #3ac0cf 25%, #a2dfc8 70%, #00c7dc);
-border-radius: 20px;
+      // linear-gradient(135deg, #68ddb3ab, #3ac0cf99 25%, #a2dfc8a6 70%, #00c7dca1)
+      border-radius: 20px;
     }
   }
 }
