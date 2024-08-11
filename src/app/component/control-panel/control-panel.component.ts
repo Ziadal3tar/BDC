@@ -17,7 +17,8 @@ export class ControlPanelComponent {
   constructor(
     private _adminServices: AdminService,
     private _categoryService: CategoryService,
-    private _SharingService: SharingService
+    private _SharingService: SharingService,
+    private _BlogService: BlogService
   ) {
     this._SharingService.updateAdmins();
     this._SharingService.currentAdmins.subscribe((data: any) => {
@@ -26,6 +27,11 @@ export class ControlPanelComponent {
     this._SharingService.updateCategories();
     this._SharingService.currentCategories.subscribe((data: any) => {
       this.allCategories = data;
+    });
+
+    this._SharingService.updateBlogs();
+    this._SharingService.currentBlogs.subscribe((data: any) => {
+      this.allBlogs = data;
     });
   }
   adminName: any;
@@ -37,6 +43,8 @@ export class ControlPanelComponent {
   categoryErr: any;
   allCategories: any;
 
+  allBlogs:any
+  blogCategory: any = '';
   addBlog: Boolean = false;
   title: string = 'Blog Details';
   inputTitle: string = 'Blog Title';
@@ -45,22 +53,15 @@ export class ControlPanelComponent {
   inputDescData: string = '';
   numOfPar: any;
   num: number = 0;
-  image: any;
-  blog: any = {
-    blogTitle: '',
-    blogDescription: '',
-    blogImage: '',
-    paragraphs: [
-      {
-        ParagraphTitle: '',
-        ParagraphDescription: '',
-        ParagraphImage: '',
-      },
-    ],
-  };
+  image: any = '';
+  loading:Boolean = false
   formData = new FormData();
   next() {
+
+    this.formData.append(`category`, this.blogCategory.toString());
     if (this.numOfPar > 0) {
+      this.formData.append(`numberOfParagraph`, this.numOfPar.toString());
+
       if (this.num === 0) {
         this.addBlogDetails();
       } else if (this.num <= this.numOfPar!) {
@@ -71,35 +72,19 @@ export class ControlPanelComponent {
     }
   }
 
-  // prev() {
-  //   if (this.num > 1) {
-  //     this.num--;
-  //     this.updateFormForParagraph(this.num);
-  //   }else{
-  //     this.num--;
-
-  //     this.backToBlog()
-  //   }
-
-  //   console.log('prev');
-
-  // }
-
   addBlogDetails() {
-    this.blog.blogTitle = this.inputTitleData;
-    this.blog.blogDescription = this.inputDescData;
-    this.blog.blogImage = this.image;
+    this.formData.append(`blogTitle`, this.inputTitleData);
+    this.formData.append(`blogDescription`, this.inputDescData);
+
     this.resetInputFields();
     this.num++;
     this.updateFormForParagraph(this.num);
   }
 
   addParagraph() {
-    this.blog.paragraphs.push({
-      ParagraphTitle: this.inputTitleData,
-      ParagraphDescription: this.inputDescData,
-      ParagraphImage: this.image,
-    });
+    this.formData.append(`paragraph${this.num}Title`, this.inputTitleData);
+    this.formData.append(`paragraph${this.num}Description`, this.inputDescData);
+
     this.resetInputFields();
     this.num++;
     if (this.num <= this.numOfPar!) {
@@ -121,17 +106,32 @@ export class ControlPanelComponent {
   }
 
   finalizeBlog() {
-    // window.location.reload();
-    this.blog.paragraphs.shift();
-    // this.BlogService.createBlog(this.blog).subscribe((response: any) => {
-    //   console.log('Blog created:', response.data.createBlog);
-    // });
+
+    this.loading = true
+    this._BlogService.addBlog(this.formData).subscribe((response: any) => {
+      console.log(response);
+      if (response.message == 'Blog added successfully') {
+        this.loading = true
+        this.addBlog = false
+        window.location.reload();
+
+      }
+    });
   }
 
   onImageSelected(event: any) {
+    const inputElement = event.target as HTMLInputElement;
     const file = event.target.files[0];
     this.image = file;
-    // this.formData.append(this.title,this.image)
+
+    if (this.num >= 1) {
+      this.formData.append(`paragraph${this.num}image`, this.image);
+    } else {
+      this.formData.append('blogImage', this.image);
+    }
+    inputElement.value = '';
+    this.image = '';
+
   }
 
   isBlogDetails(): boolean {
@@ -203,6 +203,15 @@ export class ControlPanelComponent {
       },
       (err: HttpErrorResponse) => {
         this.categoryErr = err.error.message;
+      }
+    );
+  }
+  deleteBlog(id:any){
+    this._BlogService.removeBlog(id).subscribe(
+      (data: any) => {
+        if (data.message == 'removed') {
+          this._SharingService.updateBlogs();
+        }
       }
     );
   }

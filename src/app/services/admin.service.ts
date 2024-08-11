@@ -17,4 +17,7 @@ export class AdminService {
   allAdmins(): any {
     return this.http.get(`${this.baseUrl}/allUser`);
   }
+  logIn(data: any):any {
+    return this.http.post(`${this.baseUrl}/logIn`, data, {});
+  }
 }
