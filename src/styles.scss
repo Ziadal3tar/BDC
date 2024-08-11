@@ -94,5 +94,8 @@ select {
   nav {
     position: relative !important;
     background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;
+    ul,.toggle{
+      display: none !important;
+    }
   }
 }

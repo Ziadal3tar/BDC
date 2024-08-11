@@ -25,7 +25,7 @@
 
     <div class="sameTypes col-12 col-md-4 p-lg-5 py-5 pt-0" *ngIf="urlPart === 'blog'">
       <p class="fs-3 fw-bold py-3">Similar articles</p>
-      <div class="col-12 box" *ngFor="let item of Similar">
+      <div class="col-12 box" *ngFor="let item of Similar"  (click)="toBlog(item.url)" [routerLink]="['/blog/',item.url]">
         <div class="sameTypesImg">
           <img [src]="item.image" alt="">
         </div>

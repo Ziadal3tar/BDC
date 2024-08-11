@@ -2,13 +2,13 @@ import { SharingService } from './../../services/sharing.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { DateFormatPipe } from '../../services/date.pipe';
 
 @Component({
   selector: 'app-service-details',
   standalone: true,
-  imports: [CommonModule, NavComponent,DateFormatPipe],
+  imports: [CommonModule, NavComponent,DateFormatPipe,RouterModule],
   templateUrl: './service-details.component.html',
   styleUrl: './service-details.component.scss',
 
@@ -155,5 +155,17 @@ export class ServiceDetailsComponent {
         }
       });
     }
+  }
+  toBlog(url:any){
+   
+    this.SharingService.currentBlogs.subscribe((data: any) => {
+      let blog = data.filter((item:any) => item.url == url)[0];
+      this.Similar = data.filter((item: any) => item.category === blog.category);
+
+
+      if (blog) {
+        this.disPlay = blog;
+      }
+    });
   }
 }

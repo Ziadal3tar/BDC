@@ -11,8 +11,6 @@
     <li (click)="scrollTo('blogs')">Blog</li>
     <!-- <li>Contact Us</li> -->
   </ul>
-
-
   <!-- <div class="col-xl-2 col-lg-2 align-items-center justify-content-center d-none d-lg-flex">
     <button class="col-12 btn mainBgColor fw-bold">contact us</button>
   </div> -->
@@ -33,22 +31,19 @@
       class="transition d-flex flex-column align-items-start justify-content-between w-100 h-75 px-5 p-0 m-0 pb-1 list-unstyled">
 
       <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('can-we-help')"><a
-          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Who Can We Help</a></li>
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Who Can We Help</a></li>
 
       <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('about')"><a
-          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>About Us</a></li>
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>About Us</a></li>
 
 
       <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('services')"><a
-          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Services</a></li>
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Services</a></li>
       <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('blogs')"><a
-          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Blog</a></li>
-      <!-- <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Contact Us</a></li> -->
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Blog</a></li>
+      <!-- <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Contact Us</a></li> -->
     </ul>
   </div>
-  <!-- <div class="w-100 px-5 align-items-center justify-content-center overflow-hidden pb-5" >
-    <button class="col-sm-4 col-6 btn btn-warning bg-opacity-50 transition overflow-hidden" [ngClass]="{'topBtn': isOpen, 'botBtn': !isOpen}">contact us</button>
-  </div> -->
 
   <div class="w-100 px-5 align-items-center justify-content-center overflow-hidden pb-5">
     <button class="col-sm-4 col-6 btn fw-bold transition overflow-hidden fs-5"
