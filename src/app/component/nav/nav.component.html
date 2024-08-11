@@ -1,15 +1,15 @@
 <nav class="row w-100 position-fixed d-flex justify-content-between p-3 m-0 transition" id="nav">
   <div class="logo col-md-2 col-4  h-75 d-flex align-items-center justify-content-start">
 
-      <img src="./assets/logo.png" alt="" srcset="">
+    <img src="./assets/logo.png" [routerLink]="['/home']">
 
   </div>
-  <ul class="col-md-8 col-lg-7 col-xl-6 align-items-center justify-content-between list-unstyled m-0 d-none d-md-flex ">
-    <li>About Us</li>
-    <li>Who Can We Help</li>
-    <li>Blog</li>
-    <li>Services</li>
-    <li>Contact Us</li>
+  <ul class="col-md-7 col-lg-6 col-xl-5 align-items-center justify-content-between list-unstyled m-0 d-none d-md-flex ">
+    <li (click)="scrollTo('can-we-help')">Who Can We Help</li>
+    <li (click)="scrollTo('about')">About Us</li>
+    <li (click)="scrollTo('services')">Services</li>
+    <li (click)="scrollTo('blogs')">Blog</li>
+    <!-- <li>Contact Us</li> -->
   </ul>
 
 
@@ -29,12 +29,21 @@
 
 <div class="position-fixed start-0 sidenav transition d-flex flex-column d-md-none " [ngClass]="!isOpen?'close':'open'">
   <div class="h-75 w-100 d-flex align-items-end justify-content-center ">
-    <ul class="transition d-flex flex-column align-items-start justify-content-between w-100 h-75 px-5 p-0 m-0 pb-1 list-unstyled">
-      <li class="pb-4" (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>About Us</a></li>
-      <li class="pb-4" (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Blog</a></li>
-      <li class="pb-4" (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Who Can We Help</a></li>
-      <li class="pb-4" (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Services</a></li>
-      <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Contact Us</a></li>
+    <ul
+      class="transition d-flex flex-column align-items-start justify-content-between w-100 h-75 px-5 p-0 m-0 pb-1 list-unstyled">
+
+      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('can-we-help')"><a
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Who Can We Help</a></li>
+
+      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('about')"><a
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>About Us</a></li>
+
+
+      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('services')"><a
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Services</a></li>
+      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('blogs')"><a
+          [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Blog</a></li>
+      <!-- <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="bi bi-dash pe-2"></i>Contact Us</a></li> -->
     </ul>
   </div>
   <!-- <div class="w-100 px-5 align-items-center justify-content-center overflow-hidden pb-5" >
@@ -42,8 +51,7 @@
   </div> -->
 
   <div class="w-100 px-5 align-items-center justify-content-center overflow-hidden pb-5">
-    <button class="col-sm-4 col-6 btn fw-bold transition overflow-hidden fs-5" [ngClass]="{'topBtn': isOpen, 'botBtn': !isOpen}">contact us</button>
-  <div class="w-100 px-5 d-flex align-items-center justify-content-start overflow-hidden pb-5 h-50">
-    <button class="col-sm-4 col-6 btn mainBgColor fw-bold transition overflow-hidden fs-5" [ngClass]="{'topBtn': isOpen, 'botBtn': !isOpen}">contact us</button>
+    <button class="col-sm-4 col-6 btn fw-bold transition overflow-hidden fs-5"
+      [ngClass]="{'topBtn': isOpen, 'botBtn': !isOpen}">contact us</button>
+
   </div>
-</div>

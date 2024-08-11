@@ -1,3 +1,4 @@
+import { SharingService } from './services/sharing.service';
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -24,4 +25,11 @@ import { ControlPanelComponent } from "./component/control-panel/control-panel.c
 })
 export class AppComponent {
   title = 'salam';
+  constructor(private _SharingService: SharingService){
+    this._SharingService.updateAdmins();
+    this._SharingService.updateCategories();
+    this._SharingService.updateBlogs();
+
+
+  }
 }

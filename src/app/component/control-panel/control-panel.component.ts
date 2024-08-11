@@ -20,16 +20,13 @@ export class ControlPanelComponent {
     private _SharingService: SharingService,
     private _BlogService: BlogService
   ) {
-    this._SharingService.updateAdmins();
     this._SharingService.currentAdmins.subscribe((data: any) => {
       this.allAdmin = data;
     });
-    this._SharingService.updateCategories();
     this._SharingService.currentCategories.subscribe((data: any) => {
       this.allCategories = data;
     });
 
-    this._SharingService.updateBlogs();
     this._SharingService.currentBlogs.subscribe((data: any) => {
       this.allBlogs = data;
     });
@@ -74,6 +71,7 @@ export class ControlPanelComponent {
 
   addBlogDetails() {
     this.formData.append(`blogTitle`, this.inputTitleData);
+    this.formData.append(`url`,this.inputTitleData.split(' ').join('-'));
     this.formData.append(`blogDescription`, this.inputDescData);
 
     this.resetInputFields();

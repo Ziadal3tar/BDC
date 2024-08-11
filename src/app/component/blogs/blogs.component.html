@@ -4,17 +4,17 @@
     <div class="box p-3">
       <p class=" fw-bold fs-5 m-0 pb-2">SEARCH</p>
       <div class="search position-relative ">
-        <input type="text" class=" p-3 bg-white bg-opacity-50 rounded-3 w-100 border-0 h-100 "
+        <input type="text" [(ngModel)]="searchText" (keyup)="searchByText()" class=" p-3 bg-white bg-opacity-50 rounded-3 w-100 border-0 h-100 "
           placeholder="Search Blogs">
         <div class="icon position-absolute "><i class="bi bi-search fw-bold"></i></div>
       </div>
       <p class=" fw-bold fs-5 m-0 pb-2 mt-5 pt-5">CATEGORY</p>
       <div class="categories scrollStyle position-relative">
-        <div class="category d-flex align-items-center justify-content-between p-3 " *ngFor="let item of categories">
-          <label class=" fw-bold" for="{{item}}">{{item}}</label>
+        <div class="category d-flex align-items-center justify-content-between p-3 " *ngFor="let item of categories" >
+          <label class=" fw-bold" for="{{item.category}}" (click)="searchByCategory(item.category)">{{item.category}}</label>
           <label class="custom-checkbox">
-            <input [checked]="item == categoryChecked" type="checkbox" name="{{item}}" id="{{item}}" class="d-none">
-            <span class="checkmark"></span>
+            <input [checked]="item == categoryChecked" type="checkbox" name="{{item}}" id="{{item.category}}" class="d-none">
+            <span class="checkmark" (click)="searchByCategory(item.category)"></span>
           </label>
         </div>
       </div>
@@ -24,12 +24,11 @@
     <div class="col-12 col-lg-6 col-xl-4 row box " *ngFor="let item of blogs">
       <div class="col-12 inside">
 
-        <div class="img"><img src="../../../assets/abouusimg.jpg" alt="" srcset=""></div>
-        <div class="title">Lorem ipsum dolor sit.</div>
-        <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente provident officiis
-          voluptatibus!</div>
+        <div class="img"><img src="{{item.image}}" alt="" srcset=""></div>
+        <div class="title">{{item.title}}</div>
+        <div class="desc">{{ item.description | truncate:30 }}</div>
         <div class="more">
-          <button class="btn btn-dark px-4 py-2 fw-bold">Read More</button>
+          <button class="btn btn-dark px-4 py-2 fw-bold" [routerLink]="['/blog/',item.url]">Read More</button>
         </div>
 
 

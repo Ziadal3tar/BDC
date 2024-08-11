@@ -5,10 +5,12 @@
   <div class="d-flex scrollStyleX" appServicesDragScroll>
     <div class="main" *ngFor="let item of services; let i = index">
       <div class="box">
-        <div class="our-services">
+        <div class="our-services" [routerLink]="['/services/',item.url]"  >
           <img src="./assets/serviceImg1.jpeg" alt="" srcset="">
-          <div class="overlay transition"></div>
-          <h4 class="mb-2">{{ item.title }}</h4>
+          <div class="overlay transition">
+
+            <h4 class="mb-2">{{ item.title }}</h4>
+          </div>
         </div>
       </div>
     </div>

@@ -78,6 +78,7 @@
 
     .sameTypes{
       .box{
+        height: 110px;
         display: flex;
         align-items: end;
         justify-content: start;
@@ -93,6 +94,10 @@
           }
         }
         .sameTypesTitle{
+          span{
+            font-size: 15px;
+            opacity: 0.7;
+          }
           font-size: 18px;
           font-weight: bold;
           padding-left: 10px;

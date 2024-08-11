@@ -1,29 +1,21 @@
+<app-nav style="z-index: 1;" id="inDetails" class="position-relative"></app-nav>
+
 <div id="details" class="mb-5">
   <div class="box row">
-    <p class="title">Lorem ipsum dolor sit amet.</p>
+    <p class="title">{{disPlay?.title}}.</p>
     <div class="img col-12">
-      <img src="../../../assets/business.avif" alt="">
+      <img src="{{disPlay?.image}}" alt="">
     </div>
-    <div class="blogDetails col-12 col-md-8">
-      <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iure, voluptatem enim dolore
-        voluptates voluptate quaerat nesciunt impedit est. Nam reiciendis quisquam ratione nostrum voluptatum facilis
-        sit reprehenderit, corrupti quaerat enim fuga tempora quo excepturi architecto tempore ut officiis. Neque sequi
-        necessitatibus repellendus ab! Culpa neque atque praesentium dolorem voluptate sit nobis reiciendis nihil
-        assumenda inventore nostrum ab temporibus, rem numquam similique perferendis in et. Sapiente nihil explicabo
-        veniam soluta magnam magni reiciendis nulla, nostrum, quae quas quidem eos eligendi deleniti aliquam numquam id
-        odio accusamus? Facere iusto, corrupti id ab vitae, voluptas fugit tempore aperiam quam, repellat similique
-        totam officia magni dolore enim nemo? Excepturi nesciunt sunt eaque maxime, dolore praesentium doloribus libero
-        quasi perferendis, facere voluptate commodi sint optio laudantium accusamus quisquam dolorem deleniti omnis
-        repellendus. Optio ullam natus voluptatum fugit nobis dolor maxime sunt repellat corporis, corrupti molestiae
-        eum nulla quae veniam a maiores alias. Tempora, vitae?</div>
+    <div class="blogDetails col-12" [ngClass]="{'col-md-8': urlPart=='blog'}">
+      <div class="desc">{{disPlay?.descriptionription}}</div>
 
 
 
         <div class="paragraphs">
-          <div class="paragraph" *ngFor="let paragraph of paragraphs">
+          <div class="paragraph" *ngFor="let paragraph of disPlay?.paragraphs">
             <div class="paragraphTitle">{{paragraph.title}}</div>
-            <div class="paragraphImg" *ngIf="paragraph.img" ><img src="{{paragraph.img}}" alt=""></div>
-            <div class="paragraphTitleDesc">{{paragraph.desc}}</div>
+            <div class="paragraphImg" *ngIf="paragraph.image" ><img src="{{paragraph?.image}}" alt=""></div>
+            <div class="paragraphTitleDesc">{{paragraph?.description}}</div>
           </div>
         </div>
 
@@ -31,12 +23,18 @@
 
 
 
-    <div class="sameTypes col-12 col-md-4 p-lg-5 py-5  pt-0">
+    <div class="sameTypes col-12 col-md-4 p-lg-5 py-5 pt-0" *ngIf="urlPart === 'blog'">
       <p class="fs-3 fw-bold py-3">Similar articles</p>
-      <div class="col-12 box" *ngFor="let item of paragraphs">
-        <div class="sameTypesImg"><img src="../../../assets/girl-5460168.jpg" alt=""></div>
-        <div class="sameTypesTitle">Lorem ipsum dolor sit amet.</div>
+      <div class="col-12 box" *ngFor="let item of Similar">
+        <div class="sameTypesImg">
+          <img [src]="item.image" alt="">
+        </div>
+        <div class="sameTypesTitle h-100 d-flex flex-column justify-content-between align-items-start">
+          <span>{{ item.createdAt | dateFormat }}</span>
+          <p>{{ item.title }}</p>
+        </div>
       </div>
     </div>
+
   </div>
 </div>

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NavComponent } from "../nav/nav.component";
 
 @Component({
   selector: 'app-aris7',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavComponent],
   templateUrl: './aris7.component.html',
   styleUrl: './aris7.component.scss',
 })
