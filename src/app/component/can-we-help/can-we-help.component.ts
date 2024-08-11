@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ServicesDragScrollDirective } from '../../services-drag-scroll.directive';
 
+
 @Component({
   selector: 'app-can-we-help',
   standalone: true,
@@ -19,3 +20,6 @@ export class CanWeHelpComponent {
     { title: 'Who Can We Help 5', description: 'Description 5' }
   ];
 }
+
+
+
