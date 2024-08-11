@@ -1,4 +1,5 @@
-<h1 class=" text-center m-5">Control Panel</h1>
+<div class="main h-auto py-2">
+  <h1 class=" text-center mainTitleColor fw-semibold m-5">Control Panel</h1>
 <section id="control" class="row d-flex justify-content-center col-10 offset-1 " *ngIf="!addBlog">
 
   <div class="categoryControle col-12 col-md-6 col-lg-4 mb-4 mb-xl-4 d-flex flex-column align-items-center">
@@ -63,14 +64,14 @@
         </div>
       </div>
       <div class="addInput position-relative">
-        <button class="btn btn-dark rounded-0 w-100 h-100" (click)="addBlog = !addBlog">ADD Blog</button>
+        <button class="btn rounded-0 w-100 h-100" (click)="addBlog = !addBlog">ADD Blog</button>
 
       </div>
     </div>
   </div>
 </section>
-<section id="controlAdd" class="d-flex justify-content-center " *ngIf="addBlog">
-  <div class="blogControl col-10 row d-flex justify-content-center">
+<section id="controlAdd" class="d-flex justify-content-center mb-5 " *ngIf="addBlog">
+  <div class="blogControl col-12 px-3 row d-flex justify-content-center">
     <div class="box col-12 col-md-10 col-lg-8 col-xl-4 position-relative">
       <i class="bi bi-x-lg position-absolute top-0 end-0 m-3 pointer" (click)="addBlog = !addBlog"></i>
 
@@ -82,18 +83,18 @@
           <option value="{{item.category}}" *ngFor="let item of allCategories">{{item.category}}</option>
         </select>
 
-        <input type="text" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-6 border-0 h-100 my-2"
+        <input type="text" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-7 border-0 h-100 my-2"
           placeholder="{{inputTitle}}" [(ngModel)]="inputTitleData">
 
         <input #img type="file" class="d-none" id="blogImgs" (change)="onImageSelected($event)">
-        <label for="blogImgs" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-6 border-0 h-100 my-2 text-center pointer fw-bolder" >
+        <label for="blogImgs" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-7 border-0 h-100 my-2 text-center pointer fw-bolder" >
           Upload Photo <span class="fs-6 fw-normal">(optional)</span>
         </label>
 
         <textarea placeholder="{{inputDesc}}" [(ngModel)]="inputDescData"
-          class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-6 border-0 h-100 my-2" rows="10"></textarea>
+          class="p-2 bg-white bg-opacity-50 rounded-3 col-12 col-md-10 col-lg-8 col-xl-7 border-0 h-100 my-2" rows="10"></textarea>
 
-        <div class="col-12 col-md-10 col-lg-8 col-xl-6 pt-3" *ngIf="isBlogDetails()">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 pt-3" *ngIf="isBlogDetails()">
           <p>How Many Paragraphs?</p>
           <input type="number" class="p-2 bg-white bg-opacity-50 rounded-3 col-12 border-0 h-100 my-2"
             [(ngModel)]="numOfPar">
@@ -101,7 +102,7 @@
       </div>
 
       <div class="d-flex w-100 justify-content-end" >
-        <button *ngIf="!loading" class="btn btn-dark fw-bold rounded-5 px-4 m-4" (click)="next()" [disabled]="num > numOfPar || !inputTitleData ||!inputDescData || !numOfPar || !blogCategory">
+        <button *ngIf="!loading" class="btn btn-dark fw-bold rounded-5 px-4 m-4 w-25" (click)="next()" [disabled]="num > numOfPar || !inputTitleData ||!inputDescData || !numOfPar || !blogCategory">
           <!-- <i *ngIf="!numOfPar" class="bi bi-arrow-right"></i> -->
           <i *ngIf="num < numOfPar || !numOfPar " class="bi bi-arrow-right"></i>
           <p *ngIf="num >= numOfPar && numOfPar">Add Blog</p>
@@ -115,3 +116,4 @@
     </div>
   </div>
 </section>
+</div>
