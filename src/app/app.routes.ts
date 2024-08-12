@@ -7,8 +7,6 @@ import { loginGuard } from './services/login.guard';
 import { ARIS7Component } from './component/aris7/aris7.component';
 
 export const routes: Routes = [
-
-
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path: 'home', component:HomeComponent},
   {path: 'admin', component:LoginComponent},
