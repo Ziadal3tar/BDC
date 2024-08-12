@@ -2,7 +2,12 @@ import { SharingService } from './services/sharing.service';
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
+import {
+  NavigationEnd,
+  Router,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
 import { HeaderComponent } from './component/header/header.component';
 import { HomeComponent } from './component/home/home.component';
 import { NavComponent } from './component/nav/nav.component';
@@ -48,10 +53,11 @@ AOS.init({
     BlogsComponent,
     ServiceDetailsComponent,
     ControlPanelComponent,
+    RouterModule,
   ],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-
 })
 export class AppComponent {
   title = 'salam';
