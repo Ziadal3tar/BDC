@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BlogService {
-  private baseUrl = 'http://localhost:3000/blog';
+  private baseUrl = 'https://bdc-apis-git-master-ziadal3tars-projects.vercel.app/blog';
 
   constructor(private http: HttpClient) {}
   addBlog(data: any): any {
