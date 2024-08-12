@@ -1,11 +1,11 @@
 nav {
   height: 100px;
   background-color: transparent;
+  color: white !important;
   z-index: 1;
 
   .logo {
     img {
-
       cursor: pointer;
       object-fit: contain;
       width: auto;

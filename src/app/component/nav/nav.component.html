@@ -1,19 +1,16 @@
 <nav class="row w-100 position-fixed d-flex justify-content-between p-3 m-0 transition" id="nav">
-  <div class="logo col-md-2 col-4  h-75 d-flex align-items-center justify-content-start">
+  <div class="logo col-md-2 col-4 h-100 d-flex align-items-center justify-content-start">
 
     <img src="https://res.cloudinary.com/do363ozu9/image/upload/v1723475798/logo_x8ztsx.png" [routerLink]="['/home']">
 
   </div>
-  <ul class="col-md-7 col-lg-6 col-xl-5 align-items-center justify-content-between list-unstyled m-0 d-none d-md-flex ">
+  <ul class="col-md-7 col-lg-6 col-xl-5 align-items-center justify-content-between list-unstyled m-0 pt-2 d-none d-md-flex ">
     <li (click)="scrollTo('can-we-help')">Who Can We Help</li>
     <li (click)="scrollTo('about')">About Us</li>
     <li (click)="scrollTo('services')">Services</li>
     <li (click)="scrollTo('blogs')">Blog</li>
     <!-- <li>Contact Us</li> -->
   </ul>
-  <!-- <div class="col-xl-2 col-lg-2 align-items-center justify-content-center d-none d-lg-flex">
-    <button class="col-12 btn mainBgColor fw-bold">contact us</button>
-  </div> -->
 
   <div class="col-3 d-flex d-md-none flex-column align-items-end justify-content-center toggle">
 
