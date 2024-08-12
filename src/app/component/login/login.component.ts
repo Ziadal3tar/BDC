@@ -26,7 +26,6 @@ export class LoginComponent {
     this._AdminService.logIn(data).subscribe(
 
       (data: any) => {
-        console.log(data);
         if (data.success) {
           localStorage.setItem('login', 'true');
           this._Route.navigate([`/admin/${this.adminName}`]);

@@ -16,7 +16,6 @@ export class BlogsComponent {
   constructor(private SharingService: SharingService) {
     this.SharingService.currentBlogs.subscribe((data: any) => {
       this.blogs = data;
-      console.log(data);
     });
     this.SharingService.currentCategories.subscribe((data: any) => {
       this.categories = data;

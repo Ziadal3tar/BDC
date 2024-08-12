@@ -69,6 +69,5 @@ export class ARIS7Component {
   ];
   onHover(index: any) {
     this.active = index;
-    console.log(index);
   }
 }

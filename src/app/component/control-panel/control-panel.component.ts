@@ -107,7 +107,6 @@ export class ControlPanelComponent {
 
     this.loading = true
     this._BlogService.addBlog(this.formData).subscribe((response: any) => {
-      console.log(response);
       if (response.message == 'Blog added successfully') {
         this.loading = true
         this.addBlog = false

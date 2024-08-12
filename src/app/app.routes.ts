@@ -17,6 +17,5 @@ export const routes: Routes = [
   { path: 'services/AutismProgram', component: ARIS7Component }, // Static route should come first
   { path: 'services/:serviceName', component: ServiceDetailsComponent }, // Dynamic route
   {path: 'help/:helpName', component:ServiceDetailsComponent},
-  // {path: 'userProfile/:id',canActivate:[loginGuard], component:NavComponent},
 
 ];

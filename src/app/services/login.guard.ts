@@ -4,7 +4,6 @@ import { AdminService } from './admin.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 export const loginGuard: CanActivateFn = (route, state) => {
-  console.log(localStorage);
   const login = localStorage.getItem('login');
   const router = inject(Router);
 
