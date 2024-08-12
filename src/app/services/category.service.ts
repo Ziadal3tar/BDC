@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CategoryService {
-  private baseUrl = 'bdc-apis-ziadal3tars-projects.vercel.app/category';
+  private baseUrl = 'http://localhost:3000/category';
 
   constructor(private http: HttpClient) {}
   addCategory(data: any): any {
