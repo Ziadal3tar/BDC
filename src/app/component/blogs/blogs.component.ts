@@ -17,12 +17,12 @@ export class BlogsComponent {
     this.SharingService.currentBlogs.subscribe((data: any) => {
       this.blogs = data;
       console.log(data);
-
     });
     this.SharingService.currentCategories.subscribe((data: any) => {
       this.categories = data;
     });
   }
+
   categoryChecked: any;
   blogs: any[] = [];
   categories: any[] = [];
@@ -36,8 +36,19 @@ export class BlogsComponent {
     });
   }
   searchByCategory(category: any) {
+    for (let i = 1; i < this.categories.length; i++) {
+      const element = this.categories[i];
+      const checkbox = document.getElementById(
+        `category${i}`
+      ) as HTMLInputElement;
+      if (category !== `category${i}`) {
+        checkbox.checked = false; // Uncheck other checkboxes
+      }
+    }
+    let checked = document.getElementById(category) as HTMLInputElement;
+
     this.SharingService.currentBlogs.subscribe((blogs: any) => {
-      if (this.searchCategory === category) {
+      if (checked.checked) {
         this.searchCategory = '';
         this.blogs = blogs;
       } else {

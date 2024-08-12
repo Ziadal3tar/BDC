@@ -2,7 +2,7 @@ import { SharingService } from './services/sharing.service';
 
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./component/header/header.component";
 import { HomeComponent } from "./component/home/home.component";
 import { NavComponent } from "./component/nav/nav.component";
@@ -40,12 +40,20 @@ AOS.init({
 })
 export class AppComponent {
   title = 'salam';
-  constructor(private _SharingService: SharingService){
+  constructor(private _SharingService: SharingService,private router: Router){
     this._SharingService.updateAdmins();
     this._SharingService.updateCategories();
     this._SharingService.updateBlogs();
 
 
+  }
+
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0); // Scroll to the top of the page without smooth scrolling
+      }
+    });
   }
 }
 

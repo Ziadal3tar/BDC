@@ -13,7 +13,7 @@
         <div class="category d-flex align-items-center justify-content-between p-3 " *ngFor="let item of categories" >
           <label class=" fw-bold" for="{{item.category}}" (click)="searchByCategory(item.category)">{{item.category}}</label>
           <label class="custom-checkbox">
-            <input [checked]="item == categoryChecked" type="checkbox" name="{{item}}" id="{{item.category}}" class="d-none">
+            <input type="checkbox"  id="{{item.category}}" class="d-none">
             <span class="checkmark" (click)="searchByCategory(item.category)"></span>
           </label>
         </div>

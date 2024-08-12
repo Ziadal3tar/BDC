@@ -1,7 +1,7 @@
-<div id="contact" class="d-flex align-items-end justify-content-center transition close">
+<div id="contact" class="d-flex align-items-end justify-content-center transition open" [ngClass]="open ? 'open' : 'close'">
 
-  <div class="icon" (click)="open()">
-    <i id="contactIcon" class="bi bi-telephone-fill  mainTextColor"></i>
+  <div class="icon" (click)="open = !open">
+    <i  class="bi bi-telephone-fill  mainTextColor" [ngClass]="!open ? 'bi-telephone-fill' : 'bi-telephone-forward-fill'"></i>
   </div>
   <div class="details d-flex align-items-center justify-content-center text-white fw-bold fs-3">
     contact details

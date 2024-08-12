@@ -13,7 +13,7 @@
     }
   }
 
-  .categoryControle {
+  .categoryControl {
     .box {
       width: 300px;
       height: 400px;
@@ -57,7 +57,7 @@
     }
   }
 
-  .adminsControle {
+  .adminsControl {
     .box {
       width: 300px;
       height: 400px;
@@ -104,7 +104,7 @@
     }
   }
 
-  .BlogsControle {
+  .BlogsControl {
     button{
       background-color: #4dc5d2;
       color: white;
@@ -174,4 +174,14 @@
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+}
+
+.categoryControl,
+.adminsControl,
+.BlogsControl{
+  .box{
+    @media (min-width:992px) and (max-width :1150px) {}
+    width: 250px !important;
+      height: 370px !important;
+  }
 }
