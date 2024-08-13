@@ -2,104 +2,32 @@
   width: 100%;
   overflow: hidden;
   padding: 0 50px;
-.about{
-  .AboutUs{
-    color: #418d71;
-letter-spacing: 5px;
-  }
 
-}
-  .prefSec {
-    width: auto;
-    margin: 110px 0 !important;
-    .pref {
-      text-wrap: nowrap;
-      font-weight: 900;
-      opacity: .3;
-
-      p {
-        text-wrap: nowrap;
-        font-size: 100px;
-        font-weight: 900;
-        color: transparent;
-        -webkit-text-stroke: 3px #00c7dc;
-        position: relative;
-
-        @media (max-width : 500px) {
-          font-size: 50px;
-        }
-
-        @media (min-width : 500px) and (max-width : 800px) {
-          font-size: 60px;
-        }
-
-        @media (min-width : 800px) and (max-width : 1000px) {
-          font-size: 75px;
-        }
-
-        &::before {
-          content: attr(data-text);
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          color: black;
-          -webkit-text-stroke: 0;
-          /* إزالة الإطار المزدوج */
-          clip-path: inset(1px);
-          mix-blend-mode: destination-out;
-        }
-      }
-
-      .logo {
-        width: 130px;
-        height: 130px;
-        margin: 0 150px;
-
-        @media (max-width : 500px) {
-          width: 65px;
-          height: 65px;
-          margin: 0 75px;
-
-        }
-
-        @media (min-width : 500px) and (max-width : 800px) {
-          width: 80px;
-          height: 80px;
-          margin: 0 90px;
-
-        }
-
-        @media (min-width : 800px) and (max-width : 1000px) {
-          width: 90px;
-          height: 90px;
-          margin: 0 100px;
-
-        }
-      }
-
-      img {
-        object-fit: contain;
-        height: 100%;
-        object-position: center;
-      }
+  .about {
+    .AboutUs {
+      color: #418d71;
+      letter-spacing: 5px;
     }
+
   }
+
+
 
   .about {
     height: auto;
 
     .title {
       .icon {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
         border-radius: 50%;
         border: solid 1px #68ddb2;
         margin-right: 7px;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 !important;
+        display: none;
       }
     }
 

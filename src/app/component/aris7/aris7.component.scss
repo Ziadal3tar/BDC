@@ -1,5 +1,6 @@
 #aris {
   background-image: linear-gradient(135deg, #68ddb3, #3ac0cf 25%, #a2dfc8 70%, #00c7dc);
+
   p {
     font-weight: 500;
   }
@@ -20,15 +21,128 @@
       color: white;
 
       .content {
+        padding: 0 160px !important;
+        h2 {
+          font-size: 33px !important;
+          padding: 0 40px !important;
+
+        }
         p {
-          padding: 0 50px;
+          font-size: 20px !important;
+          padding: 13px 0px !important;
+
+        }
+
+        @media (max-height: 300px) {
+          padding: 0 35px!important;
+          h2 {
+            font-size: 12px !important;
+            padding: 0 10px!important;
+          }
+          p {
+            padding: 3px 10px !important;
+            font-size: 6px !important;
+          }
+        }
+        @media (min-height: 301px) and (max-height: 400px) {
+
+          padding: 0 40px!important;
+          h2 {
+            font-size: 16px !important;
+            padding: 0 15px!important;
+          }
+          p {
+            padding: 5px 12px !important;
+            font-size: 8px !important;
+          }
+        }
+        @media (min-height: 401px) and (max-height: 500px) {
+          padding: 0 45px!important;
+          h2 {
+            font-size: 18px !important;
+            padding: 0 15px!important;
+          }
+          p {
+            padding: 5px 15px !important;
+            font-size: 10px !important;
+          }
+        }
+        @media (min-height: 501px) and (max-height: 600px) {
+          padding: 0 50px !important;
+          h2 {
+            font-size: 20px !important;
+            padding: 0 25px !important;
+          }
+          p {
+            padding: 8px 33px !important;
+            font-size: 12px !important;
+          }
+        }
+        @media (min-height: 601px) and (max-height: 700px) {
+          padding: 0 90px !important;
+          h2 {
+            font-size: 22px !important;
+          }
+          p {
+            padding: 7px 0px !important;
+            font-size: 12px !important;
+          }
+        }
+        @media (min-height: 701px) and (max-height: 850px) {
+          padding: 0 110px !important;
+          h2 {
+            font-size: 25px !important;
+            padding: 0 30px !important;
+          }
+          p {
+            padding: 5px 0px !important;
+            font-size: 14px !important;
+          }
+        }
+        @media (min-height: 851px) and (max-height: 1000px) {
+          padding: 0 130px !important;
+          h2 {
+            font-size: 30px !important;
+            padding: 0 40px !important;
+          }
+          p {
+            padding: 10px 0px !important;
+            font-size: 18px !important;
+          }
         }
       }
-
       .puzzle-piece {
-        width: 150px;
-        height: 150px;
+        width: 150px !important;
+        height: 150px !important;
         position: absolute;
+        @media (max-height: 300px) {
+          width: 40px !important;
+          height: 40px !important;
+        }
+        @media (min-height: 301px) and (max-height: 400px) {
+          width: 55px !important;
+          height: 55px !important;
+        }
+        @media (min-height: 401px) and (max-height: 500px) {
+          width: 65px !important;
+          height: 65px !important;
+        }
+        @media (min-height: 501px) and (max-height: 600px) {
+          width: 80px !important;
+          height: 80px !important;
+        }
+        @media (min-height: 601px) and (max-height: 700px) {
+          width: 90px !important;
+          height: 90px !important;
+        }
+        @media (min-height: 701px) and (max-height: 850px) {
+          width: 110px !important;
+          height: 110px !important;
+        }
+        @media (min-height: 851px) and (max-height: 1000px) {
+          width: 130px !important;
+          height: 130px !important;
+        }
       }
 
       .piece1 {

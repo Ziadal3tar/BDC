@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ServicesDragScrollDirective } from '../../services-drag-scroll.directive';
 import { Router, RouterModule } from '@angular/router';
+import { NavComponent } from "../nav/nav.component";
 @Component({
   selector: 'app-services',
 
   standalone: true,
 
-  imports: [CommonModule, ServicesDragScrollDirective, RouterModule],
+  imports: [CommonModule, ServicesDragScrollDirective, RouterModule, NavComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',
 })
@@ -22,7 +23,7 @@ export class ServicesComponent {
     { title: 'Assessments',url: 'Assessments', description: 'Description 5' },
   ];
   openInNewTab(url: string): void {
-    let baseUrl = window.location.href.split('home')[0];
+    let baseUrl = window.location.href.split('Services')[0];
     const fullUrl = `${baseUrl}/services/${url}`;
     window.open(fullUrl, '_blank');
   }

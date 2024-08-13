@@ -4,11 +4,12 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TruncatePipe } from '../../services/truncate.pipe';
 import { FormsModule } from '@angular/forms';
+import { NavComponent } from "../nav/nav.component";
 
 @Component({
   selector: 'app-blogs',
   standalone: true,
-  imports: [CommonModule, RouterModule, TruncatePipe, FormsModule],
+  imports: [CommonModule, RouterModule, TruncatePipe, FormsModule, NavComponent],
   templateUrl: './blogs.component.html',
   styleUrl: './blogs.component.scss',
 })
@@ -23,7 +24,7 @@ export class BlogsComponent {
   }
 
   openInNewTab(url: string): void {
-    let baseUrl = window.location.href.split('home')[0];
+    let baseUrl = window.location.href.split('Blog')[0];
     const fullUrl = `${baseUrl}/blog/${url}`;
     window.open(fullUrl, '_blank');
   }
