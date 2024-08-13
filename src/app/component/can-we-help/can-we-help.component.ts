@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ServicesDragScrollDirective } from '../../services-drag-scroll.directive';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
+import { NavComponent } from "../nav/nav.component";
 
 @Component({
   selector: 'app-can-we-help',
   standalone: true,
-  imports: [CommonModule, ServicesDragScrollDirective, RouterModule],
+  imports: [CommonModule, ServicesDragScrollDirective, RouterModule, NavComponent],
 
   templateUrl: './can-we-help.component.html',
   styleUrl: './can-we-help.component.scss',
@@ -22,8 +23,7 @@ export class CanWeHelpComponent {
   ];
 
   openInNewTab(url: string): void {
-    console.log(window.location.href.split('home'));
-    let baseUrl = window.location.href.split('home')[0];
+    let baseUrl = window.location.href.split('WhoCanWeHelp')[0];
     const fullUrl = `${baseUrl}/help/${url}`;
     window.open(fullUrl, '_blank');
   }

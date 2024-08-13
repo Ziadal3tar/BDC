@@ -87,13 +87,23 @@ select {
   --bs-spinner-width: 1.3rem;
   --bs-spinner-height: 1.3rem;
 }
-
-#inDetails {
-  nav {
-    position: relative !important;
-    background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;
-    ul,.toggle{
-      display: none !important;
-    }
+.navInHeader{
+  nav{
+    position: fixed !important;
+    background-color: transparent !important;
   }
 }
+.navInOther{
+  nav{
+    position: relative !important;
+    background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;  }
+}
+// #inDetails {
+//   nav {
+//     position: relative !important;
+//     background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;
+//     ul,.toggle{
+//       display: none !important;
+//     }
+//   }
+// }

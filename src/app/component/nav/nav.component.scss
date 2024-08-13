@@ -1,9 +1,10 @@
 nav {
   height: 100px;
-  background-color: transparent;
+  // background-color: transparent;
   color: white !important;
   z-index: 1;
-
+  // position: fixed !important;
+  // background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;
   .logo {
     img {
       cursor: pointer;
