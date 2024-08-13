@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AdminService {
-  private baseUrl = 'https://bdc-apis-4q2kaab94-ziadal3tars-projects.vercel.app/user';
+  private baseUrl = 'https://bdc-apis-ziadal3tars-projects.vercel.app/user';
 
   constructor(private http: HttpClient) {}
   addAdmin(data: any): any {
