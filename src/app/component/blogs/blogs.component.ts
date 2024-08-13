@@ -1,7 +1,7 @@
 import { SharingService } from './../../services/sharing.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TruncatePipe } from '../../services/truncate.pipe';
 import { FormsModule } from '@angular/forms';
 
@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './blogs.component.scss',
 })
 export class BlogsComponent {
-  constructor(private SharingService: SharingService) {
+  constructor(private SharingService: SharingService,private _Route: Router) {
     this.SharingService.currentBlogs.subscribe((data: any) => {
       this.blogs = data;
     });
@@ -22,6 +22,11 @@ export class BlogsComponent {
     });
   }
 
+  openInNewTab(url: string): void {
+    let baseUrl = window.location.href.split('home')[0];
+    const fullUrl = `${baseUrl}/blog/${url}`;
+    window.open(fullUrl, '_blank');
+  }
   categoryChecked: any;
   blogs: any[] = [];
   categories: any[] = [];

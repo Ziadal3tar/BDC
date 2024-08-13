@@ -2,7 +2,7 @@
   <h1 data-aos="fade-down" class="text-center pt-5 pt-md-0 pb-3 pb-md-0 fw-bolder Help text-uppercase">who Can We Help</h1>
   <div class="d-flex scrollStyleX" appServicesDragScroll>
     <div class="main" *ngFor="let item of WhoCanWeHelp; let i = index" >
-      <div class="box" [routerLink]="['/help/',item.url]">
+      <div class="box" (click)="openInNewTab(item.url)">
         <div class="who-Can-We-Help">
           <img src="./assets/help.jpg" alt="" srcset="">
           <div class="overlay transition ">

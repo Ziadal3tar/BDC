@@ -6,7 +6,7 @@
     <div class="img col-12">
       <img src="{{disPlay?.image}}" alt="">
     </div>
-    <div class="blogDetails col-12" [ngClass]="{'col-md-8': urlPart=='blog'}">
+    <div class="blogDetails col-12" [ngClass]="{'col-lg-8': urlPart=='blog'}">
       <div class="desc">{{disPlay?.descriptionription}}</div>
 
 
@@ -23,7 +23,7 @@
 
 
 
-    <div class="sameTypes col-12 col-md-4 p-lg-5 py-5 pt-0" *ngIf="urlPart === 'blog'">
+    <div class="sameTypes col-12 col-lg-4 p-lg-5 py-5 pt-0" *ngIf="urlPart === 'blog'">
       <p class="fs-3 fw-bold py-3">Similar articles</p>
       <div class="col-12 box" *ngFor="let item of Similar"  (click)="toBlog(item.url)" [routerLink]="['/blog/',item.url]">
         <div class="sameTypesImg">

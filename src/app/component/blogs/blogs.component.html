@@ -28,7 +28,7 @@
         <div class="title">{{item.title}}</div>
         <div class="desc">{{ item.description | truncate:30 }}</div>
         <div class="more">
-          <button class="btn btn-dark px-4 py-2 fw-bold" [routerLink]="['/blog/',item.url]">Read More</button>
+          <button class="btn btn-dark px-4 py-2 fw-bold" (click)="openInNewTab(item.url)">Read More</button>
         </div>
 
 

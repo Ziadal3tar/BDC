@@ -1,5 +1,6 @@
 #details {
   padding: 0 150px;
+
   @media (min-width : 250px) and (max-width : 500px) {
     padding: 0 20px !important;
   }
@@ -13,14 +14,17 @@
     padding: 0 70px !important;
 
   }
+
   @media (min-width : 991px) and (max-width : 1199px) {
     padding: 0 30px !important;
 
   }
+
   @media (min-width : 1200px) and (max-width : 1500px) {
     padding: 0 50px !important;
 
   }
+
   .box {
     .title {
       font-size: 44px;
@@ -47,38 +51,53 @@
         margin: 20px 0 30px 0;
         font-size: 18px;
       }
-      .paragraphs{
-        .paragraph{
-          .paragraphTitle{
+
+      .paragraphs {
+        .paragraph {
+          .paragraphTitle {
             text-align: left;
             font-size: 38px;
-      font-weight: 900 !important;
-      margin-top: 50px;
+            font-weight: 900 !important;
+            margin-top: 50px;
           }
-          .paragraphImg{
+
+          .paragraphImg {
             // width: 100%;
             height: 50vh;
             display: flex;
             align-items: center;
             justify-content: left;
             margin: 20px 0;
-            img{
+
+            @media (max-width : 767px) {
+              align-items: start !important;
+              height: auto !important;
+            }
+
+            img {
               object-fit: cover;
               border-radius: 13px;
               height: 100%;
               width: auto;
+
+              @media (max-width : 767px) {
+                width: 100% !important;
+                height: auto !important;
+              }
+
             }
           }
-          .paragraphDesc{
-        font-size: 18px;
+
+          .paragraphDesc {
+            font-size: 18px;
 
           }
         }
       }
     }
 
-    .sameTypes{
-      .box{
+    .sameTypes {
+      .box {
         height: 110px;
         display: flex;
         align-items: end;
@@ -86,19 +105,23 @@
         border-bottom: solid 1px rgba(0, 0, 0, 0.24);
         padding: 30px 0 15px 0;
         cursor: pointer;
-        .sameTypesImg{
+
+        .sameTypesImg {
           height: 70px;
-          img{
+
+          img {
             height: 100%;
             object-fit: cover;
             border-radius: 7px;
           }
         }
-        .sameTypesTitle{
-          span{
+
+        .sameTypesTitle {
+          span {
             font-size: 15px;
             opacity: 0.7;
           }
+
           font-size: 18px;
           font-weight: bold;
           padding-left: 10px;
