@@ -27,16 +27,16 @@
     <ul
       class="transition d-flex flex-column align-items-start justify-content-between w-100 h-75 px-5 p-0 m-0 pb-1 list-unstyled">
 
-      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('can-we-help')"><a
+      <li class="pb-4" (click)="isOpen = false" routerLink="/WhoCanWeHelp"><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Who Can We Help</a></li>
 
-      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('about')"><a
+      <li class="pb-4" (click)="isOpen = false" routerLink="/About"><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>About Us</a></li>
 
 
-      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('services')"><a
+      <li class="pb-4" (click)="isOpen = false" routerLink="/Services"><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Services</a></li>
-      <li class="pb-4" (click)="isOpen = false" (click)="scrollTo('blogs')"><a
+      <li class="pb-4" (click)="isOpen = false" routerLink="/Blog"><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Blog</a></li>
       <!-- <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Contact Us</a></li> -->
     </ul>
