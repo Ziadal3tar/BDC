@@ -67,6 +67,40 @@ export class ARIS7Component {
       ],
     },
   ];
+  paragraphs: any[] = [
+    {
+      title: 'Lorem ipsum dolor sit.',
+      image: 'https://res.cloudinary.com/dwfz5qvgr/image/upload/v1680866482/samples/animals/reindeer.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+    {
+      title: 'Lorem ipsum dolor sit.',
+      image: 'https://res.cloudinary.com/dwfz5qvgr/image/upload/v1680866482/samples/animals/reindeer.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+    {
+      title: 'Lorem ipsum dolor sit.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+    {
+      title: 'Lorem ipsum dolor sit.',
+      image: 'https://res.cloudinary.com/dwfz5qvgr/image/upload/v1680866482/samples/animals/reindeer.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+    {
+      title: 'Lorem ipsum dolor sit.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+    {
+      title: 'Lorem ipsum dolor sit.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+    {
+      title: 'Lorem ipsum dolor sit.',
+      image: 'https://res.cloudinary.com/dwfz5qvgr/image/upload/v1680866482/samples/animals/reindeer.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, voluptatibus quia ut asperiores libero quae qui! Optio officia illo nihil dolores omnis. Voluptates, culpa nihil beatae officia molestias eligendi rem unde? Nisi aliquam maxime officia sed cupiditate nihil temporibus magni veritatis ullam optio quas fugiat quae explicabo autem, exercitationem facere asperiores consequatur voluptas, consectetur blanditiis repellendus! Nemo modi rerum, repellat accusamus unde adipisci rem tempora temporibus molestias commodi ratione. Ducimus unde reiciendis saepe praesentium, officiis dolorem accusamus fugit laborum optio!',
+    },
+  ];
   onHover(index: any) {
     this.active = index;
   }

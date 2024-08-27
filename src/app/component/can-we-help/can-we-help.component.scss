@@ -1,134 +1,118 @@
 #help {
-  margin-top: 100px;
-  .Help {
-    color: #418d71;
-    letter-spacing: 5px;
-  }
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  padding: 100px 0 0 0 ;
+    h1 {
+      color: #418d71;
+      letter-spacing: 5px;
+    }
 
 
 
-  .box {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 10px;
+    .main {
+      display: inline-block;
+      transition: 0.5s;
+      transform: translateX(0px);
 
-    .who-Can-We-Help {
-      background-color: transparent !important;
-
-      overflow: hidden;
-      height: 70vh;
-      margin-top: 75px;
-
-      min-height: 198px;
-      border-radius: 20px;
-      background-color: #fff;
-      transition: all .4s ease-in-out;
-      box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17);
-      position: relative;
-      width: 25vw;
-      display: flex;
-      align-items: end;
-      justify-content: start;
-
-      img {
-        object-fit: cover;
-        object-position: center;
+      .box {
+        position: relative;
         width: 100%;
-        height: 100%;
-        filter: brightness(0.5);
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 10px;
 
-      }
+        .our-services {
+          background-color: transparent !important;
 
-      &:hover {
-        background-color: rgb(12, 2, 2) !important;
+          overflow: hidden;
+          height: 60vh;
+          margin-top: 75px;
 
-      }
+          min-height: 198px;
+          border-radius: 20px;
+          background-color: #fff;
+          transition: all .4s ease-in-out;
+          box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17);
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: end;
+          justify-content: start;
 
-      @media (min-width :900px) and (max-width :1150px) {
-        width: 35vw;
-        height: 60vh;
+          img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.5);
 
-      }
-      @media (min-width :600px) and (max-width :900px) {
-        width: 45vw;
-        height: 60vh;
+          }
 
-      }
+          &:hover {
+            background-color: rgb(12, 2, 2) !important;
 
-      @media (max-width :600px) {
-        width: 80vw;
-        height: 60vh;
+          }
 
-      }
+          @media (min-width :900px) and (max-width :1150px) {
+            width: 35vw;
+            height: 60vh;
 
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #68ddb200;
-        pointer-events: none;
+          }
 
-      }
+          @media (min-width :600px) and (max-width :900px) {
+            width: 45vw;
+            height: 60vh;
 
-      &:hover {
-        .overlay {
-          background-color: #68ddb279 !important;
+          }
+
+          @media (max-width :600px) {
+            width: 80vw;
+            height: 60vh;
+
+          }
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #68ddb200;
+            pointer-events: none;
+
+          }
+
+          &:hover {
+            .overlay {
+              background-color: #68ddb279 !important;
+            }
+          }
+
+          p,
+          h4 {
+            color: rgb(255, 255, 255) !important;
+            user-select: none;
+            z-index: 3;
+          }
+
+          h4 {
+            font-size: 25px;
+            font-weight: 600;
+            // position: absolute;
+            padding: 20px;
+          }
+
+
+
         }
       }
-
-      p,
-      h4 {
-        color: rgb(255, 255, 255) !important;
-        user-select: none;
-        z-index: 3;
-      }
-
-      h4 {
-        font-size: 25px;
-        font-weight: 600;
-        padding: 20px;
-      }
-
-
-
     }
+
+
+
+
+
+
   }
-
-  .scrollStyleX {
-    overflow-y: hidden;
-    overflow-x: auto;
-    cursor: grab;
-
-    &.grabbing {
-      cursor: grabbing;
-    }
-  }
-
-  .scrollStyleX:active {
-    cursor: grabbing;
-  }
-
-  .scrollStyleX::-webkit-scrollbar {
-    width: 2px;
-    height: 0px;
-  }
-
-  .scrollStyleX::-webkit-scrollbar-track {
-    background-color: #000000;
-    border-radius: 10px;
-    height: 80% !important;
-    width: 0px;
-  }
-
-  .scrollStyleX::-webkit-scrollbar-thumb {
-    background-color: #5692cd;
-    border-radius: 20px;
-    transition: 1s !important;
-    margin-right: 20px !important;
-  }
-
-}

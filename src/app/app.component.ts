@@ -34,7 +34,7 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -54,6 +54,8 @@ AOS.init({
     ServiceDetailsComponent,
     ControlPanelComponent,
     RouterModule,
+    CarouselModule,
+
   ],
 
   templateUrl: './app.component.html',

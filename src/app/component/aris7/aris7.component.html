@@ -33,4 +33,19 @@
       </div>
     </div>
   </div>
+  <div class="blogDetails col-12">
+    <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ullam accusamus voluptate, quae totam sed cupiditate enim laudantium a quisquam.</div>
+
+
+
+      <div class="paragraphs">
+        <div class="paragraph" *ngFor="let paragraph of paragraphs">
+          <div class="paragraphTitle">{{paragraph.title}}</div>
+          <div class="paragraphImg" *ngIf="paragraph.image" ><img src="{{paragraph?.image}}" alt=""></div>
+          <div class="paragraphTitleDesc">{{paragraph?.description}}</div>
+        </div>
+      </div>
+
+  </div>
+
 </section>

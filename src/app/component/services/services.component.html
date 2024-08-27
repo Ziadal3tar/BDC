@@ -1,20 +1,43 @@
 
-<app-nav style="z-index: 1;" class="position-relative navInOther"></app-nav>
-
-<section id="services" class=" mt-5 mt-md-0">
+<!-- <section id="services" class=" mt-5 mt-md-0">
 
   <h1 data-aos="fade-down" class="text-center pt-5 pb-3 fw-bolder ourServices text-uppercase">Our Services</h1>
-  <div class="d-flex scrollStyleX" appServicesDragScroll>
-    <div class="main" *ngFor="let item of services; let i = index">
+  <div id="main" class="d-flex scrollStyleX" >
+    <div  class="main" *ngFor="let item of services; let i = index">
       <div class="box">
-        <div class="our-services"  (click)="openInNewTab(item.url)" >
-          <img src="./assets/serviceImg1.jpeg" alt="" srcset="">
+        <div class="our-services" (click)="openInNewTab(item.url)">
+          <img src="./assets/serviceImg1.jpeg" alt="">
           <div class="overlay transition">
-
             <h4 class="mb-2">{{ item.title }}</h4>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="col-12 d-flex align-items-center justify-content-center">
+    <div class="arrows" appPrev><i class="bi bi-caret-left-fill"></i></div>
+    <div class="arrows" appNext><i class="bi bi-caret-right-fill"></i></div>
+  </div>
+
+</section> -->
+<section id="services" class=" mt-5 mt-md-0">
+  <h1 data-aos="fade-down" class="text-center pt-5 pb-3 fw-bolder ourServices text-uppercase">Our Services</h1>
+
+<owl-carousel-o [options]="customOptions">
+  <ng-container *ngFor="let item of services; let i = index">
+    <ng-template carouselSlide>
+      <div  class="main">
+        <div class="box">
+          <div class="our-services">
+            <img src="./assets/serviceImg1.jpeg" alt="">
+            <div class="overlay transition">
+              <h4 class="mb-2">{{ item.title }}</h4>
+            </div>
+          </div>
+        </div>
+        </div>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
 </section>

@@ -15,10 +15,10 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: LoginComponent },
 
-  { path: 'About', component: AboutComponent },
-  { path: 'Services', component: ServicesComponent },
-  { path: 'Blog', component: BlogsComponent },
-  { path: 'WhoCanWeHelp', component: CanWeHelpComponent },
+  // { path: 'About', component: AboutComponent },
+  // { path: 'Services', component: ServicesComponent },
+  // { path: 'Blog', component: BlogsComponent },
+  // { path: 'WhoCanWeHelp', component: CanWeHelpComponent },
   {
     path: 'admin/:adminName',
     canActivate: [loginGuard],
