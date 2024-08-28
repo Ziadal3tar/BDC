@@ -5,11 +5,12 @@ import { Router, RouterModule } from '@angular/router';
 import { TruncatePipe } from '../../services/truncate.pipe';
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from "../nav/nav.component";
-
+import { HyphenatePipe } from '../../services/hyphenate.pipe';
+HyphenatePipe
 @Component({
   selector: 'app-blogs',
   standalone: true,
-  imports: [CommonModule, RouterModule, TruncatePipe, FormsModule, NavComponent],
+  imports: [CommonModule, RouterModule, TruncatePipe, FormsModule, NavComponent,HyphenatePipe],
   templateUrl: './blogs.component.html',
   styleUrl: './blogs.component.scss',
 })
@@ -20,11 +21,13 @@ export class BlogsComponent {
     });
     this.SharingService.currentCategories.subscribe((data: any) => {
       this.categories = data;
+      console.log(data);
+
     });
   }
 
   openInNewTab(url: string): void {
-    let baseUrl = window.location.href.split('Blog')[0];
+    let baseUrl = window.location.href.split('home')[0];
     const fullUrl = `${baseUrl}/blog/${url}`;
     window.open(fullUrl, '_blank');
   }
@@ -41,16 +44,20 @@ export class BlogsComponent {
     });
   }
   searchByCategory(category: any) {
-    for (let i = 1; i < this.categories.length; i++) {
+    let clicked = category.replace(/ /g, '')
+    for (let i = 0; i < this.categories.length; i++) {
       const element = this.categories[i];
-      const checkbox = document.getElementById(
-        `category${i}`
+      let categoryId = element.category.replace(/ /g, '')
+      console.log(clicked,categoryId);
+
+      const checkbox :any = document.getElementById(
+        `${categoryId}`
       ) as HTMLInputElement;
-      if (category !== `category${i}`) {
-        checkbox.checked = false; // Uncheck other checkboxes
+      if (categoryId !== clicked) {
+        checkbox.checked = false;
       }
     }
-    let checked = document.getElementById(category) as HTMLInputElement;
+    let checked = document.getElementById(clicked) as HTMLInputElement;
 
     this.SharingService.currentBlogs.subscribe((blogs: any) => {
       if (checked.checked) {

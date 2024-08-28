@@ -53,7 +53,7 @@ export class ServicesComponent {
     nav: true,
     dots: false,
     navText: [ ' <i class="bi bi-caret-left-fill"></i> ', '<i class="bi bi-caret-right-fill"></i>'],
-
+    mouseDrag:false,
     responsive: {
       0: {
         items: 1,

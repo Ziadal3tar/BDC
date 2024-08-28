@@ -3,10 +3,10 @@
   <h1 data-aos="fade-down" class="text-center pt-5 pt-md-0 pb-3 pb-md-0 fw-bolder Help text-uppercase">who Can We Help</h1>
 
 <owl-carousel-o [options]="customOptions">
-  <ng-container *ngFor="let item of WhoCanWeHelp; let i = index">
+  <ng-container *ngFor="let item of WhoCanWeHelp; let i = index" >
     <ng-template carouselSlide>
       <div  class="main">
-        <div class="box">
+        <div class="box" (click)="openInNewTab(item.url)">
           <div class="our-services">
             <img src="./assets/serviceImg1.jpeg" alt="">
             <div class="overlay transition">

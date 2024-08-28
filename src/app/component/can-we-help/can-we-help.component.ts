@@ -28,7 +28,7 @@ export class CanWeHelpComponent {
     nav: true,
     dots: false,
     navText: [ ' <i class="bi bi-caret-left-fill"></i> ', '<i class="bi bi-caret-right-fill"></i>'],
-
+    mouseDrag:false,
     responsive: {
       0: {
         items: 1,
@@ -46,7 +46,7 @@ export class CanWeHelpComponent {
     },
   };
   openInNewTab(url: string): void {
-    let baseUrl = window.location.href.split('WhoCanWeHelp')[0];
+    let baseUrl = window.location.href.split('home')[0];
     const fullUrl = `${baseUrl}/help/${url}`;
     window.open(fullUrl, '_blank');
   }

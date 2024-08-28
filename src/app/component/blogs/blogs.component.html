@@ -13,9 +13,10 @@
       <p class=" fw-bold fs-5 m-0 pb-2 mt-5 pt-5">CATEGORY</p>
       <div class="categories scrollStyle position-relative">
         <div class="category d-flex align-items-center justify-content-between p-3 " *ngFor="let item of categories" >
-          <label class=" fw-bold" for="{{item.category}}" (click)="searchByCategory(item.category)">{{item.category}}</label>
+          <label class=" fw-bold" for="{{item.category | hyphenate}}" (click)="searchByCategory(item.category)">{{item.category}}</label>
+
           <label class="custom-checkbox">
-            <input type="checkbox"  id="{{item.category}}" class="d-none">
+            <input type="checkbox"  id="{{item.category | hyphenate}}" class="d-none">
             <span class="checkmark" (click)="searchByCategory(item.category)"></span>
           </label>
         </div>
