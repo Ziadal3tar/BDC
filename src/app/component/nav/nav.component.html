@@ -5,10 +5,10 @@
 
   </div>
   <ul class="col-md-7 col-lg-6 col-xl-5 align-items-center justify-content-between list-unstyled m-0 pt-2 d-none d-md-flex ">
-    <li (click)="scrollTo('can-we-help')">Who Can We Help</li>
-    <li (click)="scrollTo('about')">About Us</li>
-    <li (click)="scrollTo('services')">Services</li>
-    <li (click)="scrollTo('blogs')">Blog</li>
+    <li routerLink="/home" (click)="scrollTo('can-we-help')">Who Can We Help</li>
+    <li routerLink="/home" (click)="scrollTo('about')">About Us</li>
+    <li routerLink="/home" (click)="scrollTo('services')">Services</li>
+    <li routerLink="/home" (click)="scrollTo('blogs')">Blog</li>
     <!-- <li>Contact Us</li> -->
   </ul>
 
@@ -27,16 +27,16 @@
     <ul
       class="transition d-flex flex-column align-items-start justify-content-between w-100 h-75 px-5 p-0 m-0 pb-1 list-unstyled">
 
-      <li  (click)="scrollTo('can-we-help')" class="pb-4" (click)="isOpen = false" ><a
+      <li  routerLink="/home" (click)="scrollTo('can-we-help')" class="pb-4" (click)="isOpen = false" ><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Who Can We Help</a></li>
 
-      <li  (click)="scrollTo('about')" class="pb-4" (click)="isOpen = false" ><a
+      <li  routerLink="/home" (click)="scrollTo('about')" class="pb-4" (click)="isOpen = false" ><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>About Us</a></li>
 
 
-      <li  (click)="scrollTo('services')" class="pb-4" (click)="isOpen = false" ><a
+      <li  routerLink="/home" (click)="scrollTo('services')" class="pb-4" (click)="isOpen = false" ><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Services</a></li>
-      <li  (click)="scrollTo('blogs')" class="pb-4" (click)="isOpen = false" ><a
+      <li  routerLink="/home" (click)="scrollTo('blogs')" class="pb-4" (click)="isOpen = false" ><a
           [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Blog</a></li>
       <!-- <li (click)="isOpen = false"><a [ngClass]="{'top': isOpen, 'bot': !isOpen}"><i class="fa-solid fa-seedling pe-1"></i>Contact Us</a></li> -->
     </ul>
