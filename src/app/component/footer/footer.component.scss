@@ -34,10 +34,10 @@
 // }
 footer {
   background-image: linear-gradient(135deg, #003339, #0b0d0e 35%, #3ac0cf 60%, #003339);
-  height: 150px;
+  height: 180px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
 
   .img {
@@ -46,7 +46,7 @@ footer {
     padding: 10px;
 
     img {
-      height: 100%;
+      height: 90%;
       width: auto;
       object-fit: contain;
 
