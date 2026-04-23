@@ -1,46 +1,89 @@
-#about {
-  width: 100%;
-  overflow: hidden;
-  padding: 150px 50px 0 50px !important;
+.about {
+  padding: 100px 0;
+  background: #020617;
 
-  .about {
-    .AboutUs {
-      color: #418d71;
-      letter-spacing: 5px;
-    }
-
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    align-items: center;
   }
 
+  @media (min-width: 992px) {
+    .about-wrapper {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
 
+  /* ================= TEXT ================= */
 
-  .about {
-    height: auto;
+  .about-content {
+    h2 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      margin-bottom: 20px;
 
-    .title {
-      .icon {
-        width: 30px !important;
-        height: 30px !important;
-        border-radius: 50%;
-        border: solid 1px #68ddb2;
-        margin-right: 7px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 !important;
-        display: none;
+      span {
+        color: #00c7dc;
       }
     }
 
-    .img {
-      height: 100%;
+    .intro {
+      opacity: 0.8;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
 
-      img {
-        object-fit: contain;
-        object-position: center;
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .feature {
+        display: flex;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        background: #0f172a;
+        transition: 0.3s;
+
+        &:hover {
+          background: #1e293b;
+        }
+
+        .icon {
+          font-size: 24px;
+        }
+
+        h4 {
+          margin-bottom: 5px;
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+          opacity: 0.7;
+        }
       }
+    }
+  }
+
+  /* ================= IMAGE ================= */
+
+  .about-image {
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: linear-gradient(45deg, transparent, rgba(0,199,220,0.2));
     }
   }
 }

@@ -1,119 +1,65 @@
-#help {
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-  position: relative;
-  padding: 100px 0 0 0 ;
-    h1 {
-      color: #418d71;
-      letter-spacing: 5px;
+.help {
+  padding: 80px 0;
+  background: #020617;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
+    p {
+      opacity: 0.7;
+      max-width: 600px;
+      margin: auto;
+    }
+  }
 
+  .help-card {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s;
 
-    .main {
-      display: inline-block;
-      transition: 0.5s;
-      transform: translateX(0px);
+    background: #0f172a;
 
-      .box {
-        position: relative;
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    .image {
+      height: 300px;
+      overflow: hidden;
+
+      img {
         width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 10px;
-        cursor: pointer;
-
-        .our-services {
-          background-color: transparent !important;
-
-          overflow: hidden;
-          height: 60vh;
-          margin-top: 75px;
-
-          min-height: 198px;
-          border-radius: 20px;
-          background-color: #fff;
-          transition: all .4s ease-in-out;
-          box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17);
-          position: relative;
-          width: 100%;
-          display: flex;
-          align-items: end;
-          justify-content: start;
-
-          img {
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-            height: 100%;
-            filter: brightness(0.5);
-
-          }
-
-          &:hover {
-            background-color: rgb(12, 2, 2) !important;
-
-          }
-
-          @media (min-width :900px) and (max-width :1150px) {
-            width: 35vw;
-            height: 60vh;
-
-          }
-
-          @media (min-width :600px) and (max-width :900px) {
-            width: 45vw;
-            height: 60vh;
-
-          }
-
-          @media (max-width :600px) {
-            width: 80vw;
-            height: 60vh;
-
-          }
-
-          .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #68ddb200;
-            pointer-events: none;
-
-          }
-
-          &:hover {
-            .overlay {
-              background-color: #68ddb279 !important;
-            }
-          }
-
-          p,
-          h4 {
-            color: rgb(255, 255, 255) !important;
-            user-select: none;
-            z-index: 3;
-          }
-
-          h4 {
-            font-size: 25px;
-            font-weight: 600;
-            // position: absolute;
-            padding: 20px;
-          }
-
-
-
-        }
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
       }
     }
 
+    &:hover img {
+      transform: scale(1.1);
+    }
 
+    .content {
+      padding: 20px;
 
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
 
-
-
+      p {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+    }
   }
+}

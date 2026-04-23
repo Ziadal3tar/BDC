@@ -13,47 +13,49 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     RouterModule,
     NavComponent,
     CarouselModule,
-
   ],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
-
 })
 export class ServicesComponent {
-
-
-
-  services = [
-    {
-      title: 'Brain Training1',
-      url: 'BrainTraining',
-      description: 'Description 1',
-    },
-    {
-      title: 'Autism Program2',
-      url: 'AutismProgram',
-      description: 'Description 2',
-    },
-    {
-      title: 'Family Program3',
-      url: 'FamilyProgram',
-      description: 'Description 3',
-    },
-    {
-      title: 'PASS Programs4',
-      url: 'PASSPrograms',
-      description: 'Description 4',
-    },
-    { title: 'Assessments5', url: 'Assessments', description: 'Description 5' },
-  ];
+ services = [
+  {
+    title: 'Brain Training',
+    url: 'BrainTraining',
+    description: 'Improve focus and cognitive performance.',
+  },
+  {
+    title: 'Autism Program',
+    url: 'AutismProgram',
+    description: 'Specialized support for autism development.',
+  },
+  {
+    title: 'Family Program',
+    url: 'FamilyProgram',
+    description: 'Help families build better communication.',
+  },
+  {
+    title: 'PASS Programs',
+    url: 'PASSPrograms',
+    description: 'Cognitive training based on PASS theory.',
+  },
+  {
+    title: 'Assessments',
+    url: 'Assessments',
+    description: 'Professional brain and behavior evaluation.',
+  },
+];
 
   customOptions: any = {
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
-    navText: [ ' <i class="bi bi-caret-left-fill"></i> ', '<i class="bi bi-caret-right-fill"></i>'],
-    mouseDrag:false,
+    navText: [
+      ' <i class="bi bi-caret-left-fill"></i> ',
+      '<i class="bi bi-caret-right-fill"></i>',
+    ],
+    mouseDrag: false,
     responsive: {
       0: {
         items: 1,
@@ -67,7 +69,6 @@ export class ServicesComponent {
       1350: {
         items: 4,
       },
-
     },
   };
 

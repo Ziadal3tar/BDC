@@ -9,9 +9,12 @@ import { NavComponent } from "../nav/nav.component";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
-  ngAfterViewInit(): void {
-    this.videoPlayer.nativeElement.muted = true;
-  }
+@ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
+
+ngAfterViewInit(): void {
+  const video = this.videoPlayer.nativeElement;
+  video.muted = true;
+  video.play().catch(() => {});
+}
 
 }

@@ -23,27 +23,20 @@ export class CanWeHelpComponent {
     { title: 'Who Can We Help 5', url: 'help5', description: 'Description 5' },
   ];
   customOptions: any = {
-    loop: true,
-    margin: 10,
-    nav: true,
-    dots: false,
+   loop: true,
+  margin: 20,
+  nav: false,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
     navText: [ ' <i class="bi bi-caret-left-fill"></i> ', '<i class="bi bi-caret-right-fill"></i>'],
     mouseDrag:false,
     responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 2,
-      },
-      1151: {
-        items: 3,
-      },
-      1350: {
-        items: 4,
-      },
-
-    },
+    0: { items: 1 },
+    600: { items: 2 },
+    1000: { items: 3 },
+    1300: { items: 4 },
+  },
   };
   openInNewTab(url: string): void {
     let baseUrl = window.location.href.split('home')[0];

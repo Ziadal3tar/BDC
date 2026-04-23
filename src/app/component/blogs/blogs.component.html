@@ -27,7 +27,7 @@
     <div class="col-12 col-lg-6 col-xl-4 row box " *ngFor="let item of blogs">
       <div class="col-12 inside">
 
-        <div class="img"><img src="{{item.image}}" alt="" srcset=""></div>
+        <div class="img"><img src="{{item.image}}" alt="{{item.title}}" ></div>
         <div class="title">{{item.title}}</div>
         <div class="desc">{{ item.description | truncate:20 }}</div>
         <div class="more">

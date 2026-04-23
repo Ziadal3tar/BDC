@@ -6,34 +6,39 @@ import { ScrollTransformDirective } from '../../scroll-transform.directive';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [CommonModule,RouterModule,ScrollTransformDirective],
+  imports: [CommonModule, RouterModule, ScrollTransformDirective],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-  isOpen: Boolean = false;
-  scrollTo(sectionId: string) {
-    // Wait for Angular to complete rendering
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 0);
+
+  isOpen = false;
+  isScrolled = false;
+  activeSection = '';
+
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
   }
 
-  @HostListener('window:scroll', ['$event'])
-  navBg(): void {
-    const nav = document.getElementById('nav');
+  closeMenu() {
+    this.isOpen = false;
+  }
 
-    if (window.scrollY >= 700) {
-      if (nav) {
-        nav.classList.add('scrolled');
-      }
-    } else {
-      if (nav) {
-        nav.classList.remove('scrolled');
-      }
-    }
+  scrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  navigate(id: string) {
+    this.scrollTo(id);
+    this.closeMenu();
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.isScrolled = window.scrollY > 50;
   }
 }

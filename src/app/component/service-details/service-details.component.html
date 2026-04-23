@@ -1,40 +1,51 @@
-<app-nav style="z-index: 1;" class="position-relative navInOther"></app-nav>
+<section class="details">
 
-<div id="details" class="mb-5">
-  <div class="box row">
-    <p class="title">{{disPlay?.title}}.</p>
-    <div class="img col-12">
-      <img src="{{disPlay?.image}}" alt="">
+  <div class="container details-layout">
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+      <h1 class="title">{{ disPlay?.title }}</h1>
+
+      <img class="cover" [src]="disPlay?.image" />
+
+      <p class="desc">
+        {{ disPlay?.descriptionription }}
+      </p>
+
+      <div class="paragraph" *ngFor="let p of disPlay?.paragraphs">
+
+        <h2>{{ p.title }}</h2>
+
+        <img *ngIf="p.image" [src]="p.image" />
+
+        <p>{{ p.description }}</p>
+
+      </div>
+
     </div>
-    <div class="blogDetails col-12" [ngClass]="{'col-lg-8': urlPart=='blog'}">
-      <div class="desc">{{disPlay?.descriptionription}}</div>
 
+    <!-- SIDEBAR -->
+    <aside class="sidebar" *ngIf="urlPart === 'blog'">
 
+      <h3>Similar Articles</h3>
 
-        <div class="paragraphs">
-          <div class="paragraph" *ngFor="let paragraph of disPlay?.paragraphs">
-            <div class="paragraphTitle">{{paragraph.title}}</div>
-            <div class="paragraphImg" *ngIf="paragraph.image" ><img src="{{paragraph?.image}}" alt=""></div>
-            <div class="paragraphTitleDesc">{{paragraph?.description}}</div>
-          </div>
-        </div>
+      <div class="card"
+           *ngFor="let item of Similar"
+           (click)="toBlog(item.url)"
+           [routerLink]="['/blog/',item.url]">
 
-    </div>
+        <img [src]="item.image">
 
-
-
-    <div class="sameTypes col-12 col-lg-4 p-lg-5 py-5 pt-0" *ngIf="urlPart === 'blog'">
-      <p class="fs-3 fw-bold py-3">Similar articles</p>
-      <div class="col-12 box" *ngFor="let item of Similar" [ngClass]="{'d-none': disPlay._id == item._id}" (click)="toBlog(item.url)" [routerLink]="['/blog/',item.url]">
-        <div class="sameTypesImg">
-          <img [src]="item.image" alt="">
-        </div>
-        <div class="sameTypesTitle h-100 d-flex flex-column justify-content-between align-items-start">
+        <div class="info">
           <span>{{ item.createdAt | dateFormat }}</span>
           <p>{{ item.title }}</p>
         </div>
+
       </div>
-    </div>
+
+    </aside>
 
   </div>
-</div>
+
+</section>

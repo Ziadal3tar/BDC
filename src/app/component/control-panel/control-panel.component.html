@@ -60,7 +60,7 @@
           <div class="Blog w-100 d-flex align-items-center justify-content-between pe-3 border-bottom "
             *ngFor="let blog of allBlogs">
             <div class="h-100 w-100 d-flex align-items-center ">
-              <img *ngIf="blog.image" class="h-100 object-fit-contain w-25" src="{{blog.image}}" alt="">
+              <img *ngIf="blog.image" class="h-100 object-fit-contain w-25" src="{{blog.image}}" alt="{{blog.title}}">
               <p class=" ms-3">{{blog.title}}</p>
 
 

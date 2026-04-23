@@ -3,6 +3,39 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Quicksand:wght@300..700&display=swap');
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary: #00c7dc;
+  --dark: #000;
+  --text: #ffffff;
+  --container: 1200px;
+}
+
+/* Container */
+.container {
+  max-width: var(--container);
+  margin: auto;
+  padding: 0 16px;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #020617;
+  color: white;
+}
+
+/* Prevent content under navbar */
+.main-content {
+  padding-top: 80px;
+}
 *,
 p,
 h1,
@@ -17,7 +50,6 @@ h6 {
   // font-family: "Mooli", sans-serif;
   font-family: "Quicksand", sans-serif;
 }
-
 
 .transition {
   transition: 0.5s !important;
@@ -88,36 +120,37 @@ select {
   --bs-spinner-width: 1.3rem;
   --bs-spinner-height: 1.3rem;
 }
-.navInHeader{
-  nav{
-    position: fixed !important;
-    background-color: transparent !important;
-  }
-}
-.navInOther{
-  nav{
-    position: relative !important;
-    background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;  }
-}
-.owl-carousel.owl-drag .owl-item{
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-.owl-theme .owl-nav [class*=owl-] {
-  color: #FFF;
-  font-size: 14px;
+// .navInHeader{
+//   nav{
+//     position: fixed !important;
+//     background-color: transparent !important;
+//   }
+// }
+// .navInOther{
+//   nav{
+//     position: relative !important;
+//     background: linear-gradient(135deg, #000000, #000000 25%, #000000 70%, #00c7dc) !important;  }
+// }
+// .owl-carousel.owl-drag .owl-item{
+//   display: flex !important;
+//   align-items: center !important;
+//   justify-content: center !important;
+// }
+// .owl-theme .owl-nav [class*=owl-] {
+//   color: #FFF;
+//   font-size: 14px;
 
-  background: #68ddb3!important;
-  display: inline-block;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 50% !important;
-}
-.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev,.owl-theme .owl-nav
-{
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
+//   background: #68ddb3!important;
+//   display: inline-block;
+//   cursor: pointer;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50% !important;
+// }
+// .owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev,.owl-theme .owl-nav,.owl-item
+// {
+//   display: flex !important;
+//   align-items: center !important;
+//   justify-content: center !important;
+// }
+/* GLOBAL FILE */

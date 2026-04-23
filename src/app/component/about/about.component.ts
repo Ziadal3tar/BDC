@@ -12,5 +12,18 @@ import { NavComponent } from "../nav/nav.component";
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  items = [0, 1, 2, 3, 4, 5];
+  features = [
+  {
+    title: 'Improve Focus',
+    desc: 'Train your brain to stay focused and eliminate distractions.'
+  },
+  {
+    title: 'Boost Memory',
+    desc: 'Enhance your ability to retain and recall information.'
+  },
+  {
+    title: 'Mental Clarity',
+    desc: 'Achieve a clear and organized thinking process.'
+  }
+];
 }

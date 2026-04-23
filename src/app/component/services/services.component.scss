@@ -1,120 +1,83 @@
-#services {
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-  position: relative;
-  padding: 50px 0;
+.services {
+  padding: 100px 0;
+  background: #020617;
 
-  .ourServices {
-    color: #418d71;
-    letter-spacing: 5px;
-  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
 
+    h2 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+    }
 
-
-  .main {
-    display: inline-block;
-    transition: 0.5s;
-    transform: translateX(0px);
-
-    .box {
-      position: relative;
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-      padding-bottom: 10px;
-      cursor: pointer;
-
-      .our-services {
-        background-color: transparent !important;
-
-        overflow: hidden;
-        height: 60vh;
-        margin-top: 75px;
-
-        min-height: 198px;
-        border-radius: 20px;
-        background-color: #fff;
-        transition: all .4s ease-in-out;
-        box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17);
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          object-fit: cover;
-          object-position: center;
-          width: 100%;
-          height: 100%;
-          filter: brightness(0.5);
-
-        }
-
-        &:hover {
-          background-color: rgb(12, 2, 2) !important;
-
-        }
-
-        @media (min-width :900px) and (max-width :1150px) {
-          width: 35vw;
-          height: 60vh;
-
-        }
-
-        @media (min-width :600px) and (max-width :900px) {
-          width: 45vw;
-          height: 60vh;
-
-        }
-
-        @media (max-width :600px) {
-          width: 80vw;
-          height: 60vh;
-
-        }
-
-        .overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: #68ddb200;
-          pointer-events: none;
-
-        }
-
-        &:hover {
-          .overlay {
-            background-color: #68ddb279 !important;
-          }
-        }
-
-        p,
-        h4 {
-          color: rgb(255, 255, 255) !important;
-          user-select: none;
-          z-index: 3;
-        }
-
-        h4 {
-          font-size: 25px;
-          font-weight: 600;
-          // position: absolute;
-          padding: 20px;
-        }
-
-
-
-      }
+    p {
+      opacity: 0.7;
+      margin-top: 10px;
     }
   }
 
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
+  @media (min-width: 600px) {
+    .services-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
+  @media (min-width: 1000px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
+  @media (min-width: 1300px) {
+    .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 
+  /* ================= CARD ================= */
 
+  .service-card {
+    background: #0f172a;
+    border-radius: 16px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &:hover {
+      transform: translateY(-8px);
+      background: #1e293b;
+    }
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: 0.7;
+      flex: 1;
+    }
+
+    .link {
+      font-size: 14px;
+      color: #00c7dc;
+      margin-top: 10px;
+    }
+  }
 }
